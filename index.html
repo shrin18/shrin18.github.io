@@ -1,33 +1,31 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>ML for Wireless Communication</title>
-		<style>
-			body {
-			  background-color: lightblue;
-			}
-			</style>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="https://www.linkedin.com/in/shrinish-donde/">Linkedin</a></li>
-        		<li><a href=https://www.kth.se/profile/shrinish>About me !</a></li>
-        		<li><a href=http://reachingnewplaces.wordpress.com>Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Shrinish Donde!</h1>
-				<p>My project on the effects of Machine Learning in the field of Wireless Communication mainly focuses on finding a method for <em>Dynamic Multi Channel Access</em> <a href="/about">Read more about it here</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:shrinish@kth.se">email</a></li>
-        		<li><a href="https://github.com/shrin18">github.com/shrin18</a></li>
-			</ul>
-		</footer>
-	</body>
-</html>
+  
+---
+layout: main
+title: Tags
+permalink: /tags/
+---
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_words = site_tags | split:',' | sort %}
+
+<section class="blog-tags">
+  <h1>Tags in Blog</h1>
+  <ul class="tags">
+<!--  cycles through tag list and creates header row of all tags used in site with accompanying per-tag counts...-->
+  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+    <li ><a href="#{{ this_word | cgi_escape }}" class="tag">{{ this_word }} <span>({{ site.tags[this_word].size }})</span></a></li>
+  {% endunless %}{% endfor %}
+  </ul>
+<!--cycles through tag list and creates subheader for each tag name...-->
+  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+  <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
+<!--  lists all posts corresponding to specific tag...-->
+    {% for post in site.tags[this_word] %}{% if post.title != null %}
+    <div class="tag-list">
+        <span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></span>
+        <small><span>| {{ post.date | date_to_string }}</span></small>
+    </div>
+    {% endif %}{% endfor %}
+  {% endunless %}{% endfor %}
+</section>
