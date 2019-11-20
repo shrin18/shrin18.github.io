@@ -1,0 +1,55 @@
+{
+    "url": "https://api.github.com/repos/juliaBosak/form/issues/1",
+    "repository_url": "https://api.github.com/repos/juliaBosak/form",
+    "labels_url": "https://api.github.com/repos/juliaBosak/form/issues/1/labels{/name}",
+    "comments_url": "https://api.github.com/repos/juliaBosak/form/issues/1/comments",
+    "events_url": "https://api.github.com/repos/juliaBosak/form/issues/1/events",
+    "html_url": "https://github.com/juliaBosak/form/pull/1",
+    "id": 513246062,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0MzMzMDY5MjQw",
+    "number": 1,
+    "title": "Develop",
+    "user": {
+      "login": "juliaBosak",
+      "id": 34548368,
+      "node_id": "MDQ6VXNlcjM0NTQ4MzY4",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/34548368?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/juliaBosak",
+      "html_url": "https://github.com/juliaBosak",
+      "followers_url": "https://api.github.com/users/juliaBosak/followers",
+      "following_url": "https://api.github.com/users/juliaBosak/following{/other_user}",
+      "gists_url": "https://api.github.com/users/juliaBosak/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/juliaBosak/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/juliaBosak/subscriptions",
+      "organizations_url": "https://api.github.com/users/juliaBosak/orgs",
+      "repos_url": "https://api.github.com/users/juliaBosak/repos",
+      "events_url": "https://api.github.com/users/juliaBosak/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/juliaBosak/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-10-28T11:25:13Z",
+    "updated_at": "2019-10-28T11:25:24Z",
+    "closed_at": "2019-10-28T11:25:24Z",
+    "author_association": "OWNER",
+    "pull_request": {
+      "url": "https://api.github.com/repos/juliaBosak/form/pulls/1",
+      "html_url": "https://github.com/juliaBosak/form/pull/1",
+      "diff_url": "https://github.com/juliaBosak/form/pull/1.diff",
+      "patch_url": "https://github.com/juliaBosak/form/pull/1.patch"
+    },
+    "body": "",
+    "score": 1.0
+  }

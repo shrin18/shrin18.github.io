@@ -1,0 +1,55 @@
+{
+    "url": "https://api.github.com/repos/bitsurgeon/CarND_Capstone/issues/13",
+    "repository_url": "https://api.github.com/repos/bitsurgeon/CarND_Capstone",
+    "labels_url": "https://api.github.com/repos/bitsurgeon/CarND_Capstone/issues/13/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bitsurgeon/CarND_Capstone/issues/13/comments",
+    "events_url": "https://api.github.com/repos/bitsurgeon/CarND_Capstone/issues/13/events",
+    "html_url": "https://github.com/bitsurgeon/CarND_Capstone/pull/13",
+    "id": 513245608,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0MzMzMDY4ODYy",
+    "number": 13,
+    "title": "fine tune",
+    "user": {
+      "login": "bitsurgeon",
+      "id": 43927708,
+      "node_id": "MDQ6VXNlcjQzOTI3NzA4",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/43927708?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/bitsurgeon",
+      "html_url": "https://github.com/bitsurgeon",
+      "followers_url": "https://api.github.com/users/bitsurgeon/followers",
+      "following_url": "https://api.github.com/users/bitsurgeon/following{/other_user}",
+      "gists_url": "https://api.github.com/users/bitsurgeon/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/bitsurgeon/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/bitsurgeon/subscriptions",
+      "organizations_url": "https://api.github.com/users/bitsurgeon/orgs",
+      "repos_url": "https://api.github.com/users/bitsurgeon/repos",
+      "events_url": "https://api.github.com/users/bitsurgeon/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/bitsurgeon/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2019-10-28T11:24:16Z",
+    "updated_at": "2019-10-28T11:25:08Z",
+    "closed_at": "2019-10-28T11:25:08Z",
+    "author_association": "OWNER",
+    "pull_request": {
+      "url": "https://api.github.com/repos/bitsurgeon/CarND_Capstone/pulls/13",
+      "html_url": "https://github.com/bitsurgeon/CarND_Capstone/pull/13",
+      "diff_url": "https://github.com/bitsurgeon/CarND_Capstone/pull/13.diff",
+      "patch_url": "https://github.com/bitsurgeon/CarND_Capstone/pull/13.patch"
+    },
+    "body": "- site model: retrained with more images (argumented)\r\n- sim model: enable classification with SSD MobileNet v2 as it was trained with images close to TL\r\n- parameter tuned",
+    "score": 1.0
+  },

@@ -1,0 +1,55 @@
+{
+    "url": "https://api.github.com/repos/giangnv-0040/pp1906_laravel6/issues/13",
+    "repository_url": "https://api.github.com/repos/giangnv-0040/pp1906_laravel6",
+    "labels_url": "https://api.github.com/repos/giangnv-0040/pp1906_laravel6/issues/13/labels{/name}",
+    "comments_url": "https://api.github.com/repos/giangnv-0040/pp1906_laravel6/issues/13/comments",
+    "events_url": "https://api.github.com/repos/giangnv-0040/pp1906_laravel6/issues/13/events",
+    "html_url": "https://github.com/giangnv-0040/pp1906_laravel6/pull/13",
+    "id": 512545404,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0MzMyNTM3MDM5",
+    "number": 13,
+    "title": "Add category",
+    "user": {
+      "login": "giangnv-0040",
+      "id": 49383891,
+      "node_id": "MDQ6VXNlcjQ5MzgzODkx",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/49383891?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/giangnv-0040",
+      "html_url": "https://github.com/giangnv-0040",
+      "followers_url": "https://api.github.com/users/giangnv-0040/followers",
+      "following_url": "https://api.github.com/users/giangnv-0040/following{/other_user}",
+      "gists_url": "https://api.github.com/users/giangnv-0040/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/giangnv-0040/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/giangnv-0040/subscriptions",
+      "organizations_url": "https://api.github.com/users/giangnv-0040/orgs",
+      "repos_url": "https://api.github.com/users/giangnv-0040/repos",
+      "events_url": "https://api.github.com/users/giangnv-0040/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/giangnv-0040/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-10-25T14:22:06Z",
+    "updated_at": "2019-10-28T11:25:42Z",
+    "closed_at": "2019-10-28T11:25:42Z",
+    "author_association": "OWNER",
+    "pull_request": {
+      "url": "https://api.github.com/repos/giangnv-0040/pp1906_laravel6/pulls/13",
+      "html_url": "https://github.com/giangnv-0040/pp1906_laravel6/pull/13",
+      "diff_url": "https://github.com/giangnv-0040/pp1906_laravel6/pull/13.diff",
+      "patch_url": "https://github.com/giangnv-0040/pp1906_laravel6/pull/13.patch"
+    },
+    "body": "",
+    "score": 1.0
+  },

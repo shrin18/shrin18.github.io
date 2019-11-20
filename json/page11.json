@@ -1,0 +1,63 @@
+{
+    "url": "https://api.github.com/repos/SymbiFlow/sv-tests/issues/372",
+    "repository_url": "https://api.github.com/repos/SymbiFlow/sv-tests",
+    "labels_url": "https://api.github.com/repos/SymbiFlow/sv-tests/issues/372/labels{/name}",
+    "comments_url": "https://api.github.com/repos/SymbiFlow/sv-tests/issues/372/comments",
+    "events_url": "https://api.github.com/repos/SymbiFlow/sv-tests/issues/372/events",
+    "html_url": "https://github.com/SymbiFlow/sv-tests/pull/372",
+    "id": 512792497,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0MzMyNzM3MTIx",
+    "number": 372,
+    "title": "build(deps): bump third_party/tools/verilator from `4361fb8` to `8f6015a`",
+    "user": {
+      "login": "dependabot-preview[bot]",
+      "id": 27856297,
+      "node_id": "MDM6Qm90Mjc4NTYyOTc=",
+      "avatar_url": "https://avatars3.githubusercontent.com/in/2141?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dependabot-preview%5Bbot%5D",
+      "html_url": "https://github.com/apps/dependabot-preview",
+      "followers_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/received_events",
+      "type": "Bot",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 1573327469,
+        "node_id": "MDU6TGFiZWwxNTczMzI3NDY5",
+        "url": "https://api.github.com/repos/SymbiFlow/sv-tests/labels/dependencies",
+        "name": "dependencies",
+        "color": "0366d6",
+        "default": false,
+        "description": "Pull requests that update a dependency file"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-10-26T05:12:47Z",
+    "updated_at": "2019-10-28T11:25:30Z",
+    "closed_at": "2019-10-28T11:25:20Z",
+    "author_association": "CONTRIBUTOR",
+    "pull_request": {
+      "url": "https://api.github.com/repos/SymbiFlow/sv-tests/pulls/372",
+      "html_url": "https://github.com/SymbiFlow/sv-tests/pull/372",
+      "diff_url": "https://github.com/SymbiFlow/sv-tests/pull/372.diff",
+      "patch_url": "https://github.com/SymbiFlow/sv-tests/pull/372.patch"
+    },
+    "body": "Bumps [third_party/tools/verilator](https://github.com/verilator/verilator) from `4361fb8` to `8f6015a`.\n<details>\n<summary>Commits</summary>\n\n- [`8f6015a`](https://github.com/verilator/verilator/commit/8f6015aad5ac217638673cf74d5cc08d377d0c0d) Fix copy-and-paste error in undriven checks.\n- [`352adbe`](https://github.com/verilator/verilator/commit/352adbed7400968edc418a8aa1463d00eee397da) Codacy/Cppcheck cleanups.\n- [`0cbfd29`](https://github.com/verilator/verilator/commit/0cbfd29ac5945bb329ffc173ad8329279871d2dd) Codacy/Cppcheck cleanups and badge.\n- [`9f977ed`](https://github.com/verilator/verilator/commit/9f977ed41971ab9c54f33211efe4ec1e2bf19289) Codacy/Cppcheck cleanups and badge.\n- [`baa6a2c`](https://github.com/verilator/verilator/commit/baa6a2c31ad88b6f5f5f7c8aca135121f7e7e11d) Support quoted arguments in -f files, bug1535.\n- [`3b33438`](https://github.com/verilator/verilator/commit/3b33438e9144fa6ed4601c54630ae8b380bb590f) Benchmark --protect-lib runtime, bug1519.\n- [`17ee857`](https://github.com/verilator/verilator/commit/17ee8579a4a8b2e0983dcd554b91fa575ee87bf0) Internals: Make cleanOut/sizeMatters const. No functional change intended.\n- [`94f7133`](https://github.com/verilator/verilator/commit/94f7133c6ffec1f971221f6aff3c93924f1e5501) Internals: make dump const. No functional change intended.\n- [`6d58d32`](https://github.com/verilator/verilator/commit/6d58d32a0ff98e7225fc31475499f43a85c366f9) Commentary\n- [`c9d0004`](https://github.com/verilator/verilator/commit/c9d000467b821dbcf07e5dba7fafabefe868267c) Tests: Allow test-by-test verbose.\n- Additional commits viewable in [compare view](https://github.com/verilator/verilator/compare/4361fb838fb21180af95905f2467dcb203078b26...8f6015aad5ac217638673cf74d5cc08d377d0c0d)\n</details>\n<br />\n\nDependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot merge` will merge this PR after your CI passes on it\n- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it\n- `@dependabot cancel merge` will cancel a previously requested merge and block automerging\n- `@dependabot reopen` will reopen this PR if it is closed\n- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot badge me` will comment on this PR with code to add a \"Dependabot enabled\" badge to your readme\n\nAdditionally, you can set the following in the `.dependabot/config.yml` file in this repo:\n- Update frequency\n- Automerge options (never/patch/minor, and dev/runtime dependencies)\n- Out-of-range updates (receive only lockfile updates, if desired)\n- Security updates (receive only security updates, if desired)\n\n\n\n</details>",
+    "score": 1.0
+  },

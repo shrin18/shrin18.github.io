@@ -1,0 +1,63 @@
+{
+    "url": "https://api.github.com/repos/SymbiFlow/sv-tests/issues/375",
+    "repository_url": "https://api.github.com/repos/SymbiFlow/sv-tests",
+    "labels_url": "https://api.github.com/repos/SymbiFlow/sv-tests/issues/375/labels{/name}",
+    "comments_url": "https://api.github.com/repos/SymbiFlow/sv-tests/issues/375/comments",
+    "events_url": "https://api.github.com/repos/SymbiFlow/sv-tests/issues/375/events",
+    "html_url": "https://github.com/SymbiFlow/sv-tests/pull/375",
+    "id": 512792640,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0MzMyNzM3MjMw",
+    "number": 375,
+    "title": "build(deps): bump third_party/tools/icarus from `9167a23` to `df38460`",
+    "user": {
+      "login": "dependabot-preview[bot]",
+      "id": 27856297,
+      "node_id": "MDM6Qm90Mjc4NTYyOTc=",
+      "avatar_url": "https://avatars3.githubusercontent.com/in/2141?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dependabot-preview%5Bbot%5D",
+      "html_url": "https://github.com/apps/dependabot-preview",
+      "followers_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dependabot-preview%5Bbot%5D/received_events",
+      "type": "Bot",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 1573327469,
+        "node_id": "MDU6TGFiZWwxNTczMzI3NDY5",
+        "url": "https://api.github.com/repos/SymbiFlow/sv-tests/labels/dependencies",
+        "name": "dependencies",
+        "color": "0366d6",
+        "default": false,
+        "description": "Pull requests that update a dependency file"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-10-26T05:14:29Z",
+    "updated_at": "2019-10-28T11:25:12Z",
+    "closed_at": "2019-10-28T11:25:03Z",
+    "author_association": "CONTRIBUTOR",
+    "pull_request": {
+      "url": "https://api.github.com/repos/SymbiFlow/sv-tests/pulls/375",
+      "html_url": "https://github.com/SymbiFlow/sv-tests/pull/375",
+      "diff_url": "https://github.com/SymbiFlow/sv-tests/pull/375.diff",
+      "patch_url": "https://github.com/SymbiFlow/sv-tests/pull/375.patch"
+    },
+    "body": "Bumps [third_party/tools/icarus](https://github.com/steveicarus/iverilog) from `9167a23` to `df38460`.\n<details>\n<summary>Commits</summary>\n\n- [`df38460`](https://github.com/steveicarus/iverilog/commit/df38460d26e1a0bf2e96c1376f80211798b0a1d2) Add the missing ivl_stmt_case_quality to ivl.def\n- [`077d8d6`](https://github.com/steveicarus/iverilog/commit/077d8d6c4dff4f05fe89f5093ac8ea155d1de7d5) Update fstapi.c to latest from GTKWave\n- [`1069a0e`](https://github.com/steveicarus/iverilog/commit/1069a0ef024ba2dbcb7eb007e2667b38d4259799) Don't evaluate built-in system functions if they are overridden.\n- [`bf65500`](https://github.com/steveicarus/iverilog/commit/bf655003e84fe1f3af2d244fecf501c471fff816) Merge branch 'master' of github.com:steveicarus/iverilog\n- [`0abf91c`](https://github.com/steveicarus/iverilog/commit/0abf91ca4e74d37094efed336e7c11767aab1d93) Make vvp exit with FAILURE if $fatal is used to exit the simulation.\n- [`cb69a32`](https://github.com/steveicarus/iverilog/commit/cb69a321abc09a9522d7d703df230d3e0e121fa6) Enable user-defined system functions to override built-in functions.\n- [`b82c185`](https://github.com/steveicarus/iverilog/commit/b82c18505116e987cd56d814c1cf80ff09aa1cfa) iverilog: Allow the user to specify the location of VPI modules.\n- [`9f7dc73`](https://github.com/steveicarus/iverilog/commit/9f7dc732ab4cad937a49f79ad4e37aa9edb5ed16) Add error recovery for invalid cast expressions.\n- [`d56e90c`](https://github.com/steveicarus/iverilog/commit/d56e90c3f4cf522a86a5a2a7071defcc0896b7ba) Fix casts to integer types.\n- [`1a40a6f`](https://github.com/steveicarus/iverilog/commit/1a40a6f90285d10933b935264b51e4e01b6ef09f) Merge branch 'master' of github.com:steveicarus/iverilog\n- Additional commits viewable in [compare view](https://github.com/steveicarus/iverilog/compare/9167a236d89bc14271643672c5cfb07fbd59a611...df38460d26e1a0bf2e96c1376f80211798b0a1d2)\n</details>\n<br />\n\nDependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot merge` will merge this PR after your CI passes on it\n- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it\n- `@dependabot cancel merge` will cancel a previously requested merge and block automerging\n- `@dependabot reopen` will reopen this PR if it is closed\n- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot badge me` will comment on this PR with code to add a \"Dependabot enabled\" badge to your readme\n\nAdditionally, you can set the following in the `.dependabot/config.yml` file in this repo:\n- Update frequency\n- Automerge options (never/patch/minor, and dev/runtime dependencies)\n- Out-of-range updates (receive only lockfile updates, if desired)\n- Security updates (receive only security updates, if desired)\n\n\n\n</details>",
+    "score": 1.0
+  },
