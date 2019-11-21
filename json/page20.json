@@ -1,0 +1,55 @@
+{
+    "url": "https://api.github.com/repos/kmcarol26/HCI-Project/issues/35",
+    "repository_url": "https://api.github.com/repos/kmcarol26/HCI-Project",
+    "labels_url": "https://api.github.com/repos/kmcarol26/HCI-Project/issues/35/labels{/name}",
+    "comments_url": "https://api.github.com/repos/kmcarol26/HCI-Project/issues/35/comments",
+    "events_url": "https://api.github.com/repos/kmcarol26/HCI-Project/issues/35/events",
+    "html_url": "https://github.com/kmcarol26/HCI-Project/pull/35",
+    "id": 379579889,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0MjI5OTg5MjE2",
+    "number": 35,
+    "title": "Issue#10",
+    "user": {
+      "login": "kmcarol26",
+      "id": 16570493,
+      "node_id": "MDQ6VXNlcjE2NTcwNDkz",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/16570493?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kmcarol26",
+      "html_url": "https://github.com/kmcarol26",
+      "followers_url": "https://api.github.com/users/kmcarol26/followers",
+      "following_url": "https://api.github.com/users/kmcarol26/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kmcarol26/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kmcarol26/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kmcarol26/subscriptions",
+      "organizations_url": "https://api.github.com/users/kmcarol26/orgs",
+      "repos_url": "https://api.github.com/users/kmcarol26/repos",
+      "events_url": "https://api.github.com/users/kmcarol26/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kmcarol26/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2018-11-12T00:09:57Z",
+    "updated_at": "2018-11-12T00:10:11Z",
+    "closed_at": "2018-11-12T00:10:11Z",
+    "author_association": "OWNER",
+    "pull_request": {
+      "url": "https://api.github.com/repos/kmcarol26/HCI-Project/pulls/35",
+      "html_url": "https://github.com/kmcarol26/HCI-Project/pull/35",
+      "diff_url": "https://github.com/kmcarol26/HCI-Project/pull/35.diff",
+      "patch_url": "https://github.com/kmcarol26/HCI-Project/pull/35.patch"
+    },
+    "body": "",
+    "score": 1.0
+  }

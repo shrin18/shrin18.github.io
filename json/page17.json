@@ -1,0 +1,55 @@
+{
+    "url": "https://api.github.com/repos/sundarsv/cour7_imageViewer/issues/1",
+    "repository_url": "https://api.github.com/repos/sundarsv/cour7_imageViewer",
+    "labels_url": "https://api.github.com/repos/sundarsv/cour7_imageViewer/issues/1/labels{/name}",
+    "comments_url": "https://api.github.com/repos/sundarsv/cour7_imageViewer/issues/1/comments",
+    "events_url": "https://api.github.com/repos/sundarsv/cour7_imageViewer/issues/1/events",
+    "html_url": "https://github.com/sundarsv/cour7_imageViewer/pull/1",
+    "id": 379538497,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0MjI5OTYyMjQ2",
+    "number": 1,
+    "title": "Created Empty Files for all Screens",
+    "user": {
+      "login": "vijay-mamoria",
+      "id": 23036505,
+      "node_id": "MDQ6VXNlcjIzMDM2NTA1",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/23036505?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/vijay-mamoria",
+      "html_url": "https://github.com/vijay-mamoria",
+      "followers_url": "https://api.github.com/users/vijay-mamoria/followers",
+      "following_url": "https://api.github.com/users/vijay-mamoria/following{/other_user}",
+      "gists_url": "https://api.github.com/users/vijay-mamoria/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/vijay-mamoria/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/vijay-mamoria/subscriptions",
+      "organizations_url": "https://api.github.com/users/vijay-mamoria/orgs",
+      "repos_url": "https://api.github.com/users/vijay-mamoria/repos",
+      "events_url": "https://api.github.com/users/vijay-mamoria/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/vijay-mamoria/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2018-11-11T16:25:24Z",
+    "updated_at": "2018-11-12T00:12:27Z",
+    "closed_at": "2018-11-12T00:12:27Z",
+    "author_association": "COLLABORATOR",
+    "pull_request": {
+      "url": "https://api.github.com/repos/sundarsv/cour7_imageViewer/pulls/1",
+      "html_url": "https://github.com/sundarsv/cour7_imageViewer/pull/1",
+      "diff_url": "https://github.com/sundarsv/cour7_imageViewer/pull/1.diff",
+      "patch_url": "https://github.com/sundarsv/cour7_imageViewer/pull/1.patch"
+    },
+    "body": "Created Empty Files for all Screens",
+    "score": 1.0
+  }

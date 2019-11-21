@@ -1,0 +1,55 @@
+{
+    "url": "https://api.github.com/repos/joaogarciadelima/checklistos/issues/307",
+    "repository_url": "https://api.github.com/repos/joaogarciadelima/checklistos",
+    "labels_url": "https://api.github.com/repos/joaogarciadelima/checklistos/issues/307/labels{/name}",
+    "comments_url": "https://api.github.com/repos/joaogarciadelima/checklistos/issues/307/comments",
+    "events_url": "https://api.github.com/repos/joaogarciadelima/checklistos/issues/307/events",
+    "html_url": "https://github.com/joaogarciadelima/checklistos/pull/307",
+    "id": 379382098,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0MjI5ODY0ODI0",
+    "number": 307,
+    "title": "Update botocore to 1.12.42",
+    "user": {
+      "login": "pyup-bot",
+      "id": 16239342,
+      "node_id": "MDQ6VXNlcjE2MjM5MzQy",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/16239342?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pyup-bot",
+      "html_url": "https://github.com/pyup-bot",
+      "followers_url": "https://api.github.com/users/pyup-bot/followers",
+      "following_url": "https://api.github.com/users/pyup-bot/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pyup-bot/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pyup-bot/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pyup-bot/subscriptions",
+      "organizations_url": "https://api.github.com/users/pyup-bot/orgs",
+      "repos_url": "https://api.github.com/users/pyup-bot/repos",
+      "events_url": "https://api.github.com/users/pyup-bot/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pyup-bot/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2018-11-10T02:36:49Z",
+    "updated_at": "2018-11-12T00:11:42Z",
+    "closed_at": "2018-11-12T00:11:40Z",
+    "author_association": "COLLABORATOR",
+    "pull_request": {
+      "url": "https://api.github.com/repos/joaogarciadelima/checklistos/pulls/307",
+      "html_url": "https://github.com/joaogarciadelima/checklistos/pull/307",
+      "diff_url": "https://github.com/joaogarciadelima/checklistos/pull/307.diff",
+      "patch_url": "https://github.com/joaogarciadelima/checklistos/pull/307.patch"
+    },
+    "body": "\nThis PR updates [botocore](https://pypi.org/project/botocore) from **1.12.37** to **1.12.42**.\n\n\n\n<details>\n  <summary>Changelog</summary>\n  \n  \n   ### 1.12.42\n   ```\n   =======\n\n* api-change:``mediapackage``: Update mediapackage client to latest version\n   ```\n   \n  \n  \n   ### 1.12.41\n   ```\n   =======\n\n* api-change:``medialive``: Update medialive client to latest version\n* api-change:``dlm``: Update dlm client to latest version\n* api-change:``events``: Update events client to latest version\n   ```\n   \n  \n  \n   ### 1.12.40\n   ```\n   =======\n\n* api-change:``dms``: Update dms client to latest version\n* api-change:``ce``: Update ce client to latest version\n* api-change:``ec2``: Update ec2 client to latest version\n   ```\n   \n  \n  \n   ### 1.12.39\n   ```\n   =======\n\n* api-change:``codebuild``: Update codebuild client to latest version\n* api-change:``pinpoint``: Update pinpoint client to latest version\n* api-change:``ec2``: Update ec2 client to latest version\n* api-change:``pinpoint-email``: Update pinpoint-email client to latest version\n* api-change:``apigateway``: Update apigateway client to latest version\n* api-change:``waf-regional``: Update waf-regional client to latest version\n* bugfix:session config: Added the default session configuration tuples back to session.session_vars_map.\n   ```\n   \n  \n  \n   ### 1.12.38\n   ```\n   =======\n\n* api-change:``eks``: Update eks client to latest version\n* enhancement:Configuration: Added new configuration provider methods allowing for more flexibility in how a botocore session loads a particular configuration value.\n* api-change:``serverlessrepo``: Update serverlessrepo client to latest version\n   ```\n   \n  \n</details>\n\n\n \n\n<details>\n  <summary>Links</summary>\n  \n  - PyPI: https://pypi.org/project/botocore\n  - Changelog: https://pyup.io/changelogs/botocore/\n  - Repo: https://github.com/boto/botocore\n</details>\n\n",
+    "score": 1.0
+  }
