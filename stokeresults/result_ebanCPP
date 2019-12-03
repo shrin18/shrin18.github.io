@@ -1,0 +1,521 @@
+
+Lowest Cost Discovered (19)     Lowest Known Correct Cost (8)     
+                                                                  
+._Z6popcntm:                    ._Z6popcntm:                      
+movl $0x20, %eax                testq %rdi, %rdi                  
+andb %al, %ah                   je .L_40059f                      
+subl $0xfffffffd, %edi          xorl %eax, %eax                   
+retq                            .L_400590:                        
+                                movl %edi, %edx                   
+                                andl $0x1, %edx                   
+                                addl %edx, %eax                   
+                                shrq $0x1, %rdi                   
+                                jne .L_400590                     
+                                cltq                              
+                                retq                              
+                                .L_40059f:                        
+                                xorl %eax, %eax                   
+                                retq                              
+
+********************************************************************************
+
+Progress Update: 
+
+Lowest Cost Discovered (18)     Lowest Known Correct Cost (8)     
+                                                                  
+._Z6popcntm:                    ._Z6popcntm:                      
+movl $0x20, %eax                testq %rdi, %rdi                  
+andb %al, %ah                   je .L_40059f                      
+popcntl %edi, %edx              xorl %eax, %eax                   
+retq                            .L_400590:                        
+                                movl %edi, %edx                   
+                                andl $0x1, %edx                   
+                                addl %edx, %eax                   
+                                shrq $0x1, %rdi                   
+                                jne .L_400590                     
+                                cltq                              
+                                retq                              
+                                .L_40059f:                        
+                                xorl %eax, %eax                   
+                                retq                              
+
+********************************************************************************
+
+Progress Update: 
+
+Lowest Cost Discovered (17)     Lowest Known Correct Cost (8)     
+                                                                  
+._Z6popcntm:                    ._Z6popcntm:                      
+orl %edi, %edi                  testq %rdi, %rdi                  
+bsrl %edi, %edi                 je .L_40059f                      
+movl $0x20, %eax                xorl %eax, %eax                   
+retq                            .L_400590:                        
+                                movl %edi, %edx                   
+                                andl $0x1, %edx                   
+                                addl %edx, %eax                   
+                                shrq $0x1, %rdi                   
+                                jne .L_400590                     
+                                cltq                              
+                                retq                              
+                                .L_40059f:                        
+                                xorl %eax, %eax                   
+                                retq                              
+
+********************************************************************************
+
+Progress Update: 
+
+Lowest Cost Discovered (16)     Lowest Known Correct Cost (8)     
+                                                                  
+._Z6popcntm:                    ._Z6popcntm:                      
+movl $0x20, %eax                testq %rdi, %rdi                  
+shrxl %edi, %edi, %r9d          je .L_40059f                      
+lzcntl %r9d, %r9d               xorl %eax, %eax                   
+retq                            .L_400590:                        
+                                movl %edi, %edx                   
+                                andl $0x1, %edx                   
+                                addl %edx, %eax                   
+                                shrq $0x1, %rdi                   
+                                jne .L_400590                     
+                                cltq                              
+                                retq                              
+                                .L_40059f:                        
+                                xorl %eax, %eax                   
+                                retq                              
+
+********************************************************************************
+
+Progress Update: 
+
+Lowest Cost Discovered (15)     Lowest Known Correct Cost (8)     
+                                                                  
+._Z6popcntm:                    ._Z6popcntm:                      
+movl $0xfffffffd, %r9d          testq %rdi, %rdi                  
+movl $0x20, %eax                je .L_40059f                      
+addl $0x20, %r9d                xorl %eax, %eax                   
+retq                            .L_400590:                        
+                                movl %edi, %edx                   
+                                andl $0x1, %edx                   
+                                addl %edx, %eax                   
+                                shrq $0x1, %rdi                   
+                                jne .L_400590                     
+                                cltq                              
+                                retq                              
+                                .L_40059f:                        
+                                xorl %eax, %eax                   
+                                retq                              
+
+********************************************************************************
+
+Progress Update: 
+
+Lowest Cost Discovered (11)     Lowest Known Correct Cost (8)     
+                                                                  
+._Z6popcntm:                    ._Z6popcntm:                      
+popcntq %rdi, %rdi              testq %rdi, %rdi                  
+movl $0x20, %eax                je .L_40059f                      
+movzwl %ax, %r8d                xorl %eax, %eax                   
+retq                            .L_400590:                        
+                                movl %edi, %edx                   
+                                andl $0x1, %edx                   
+                                addl %edx, %eax                   
+                                shrq $0x1, %rdi                   
+                                jne .L_400590                     
+                                cltq                              
+                                retq                              
+                                .L_40059f:                        
+                                xorl %eax, %eax                   
+                                retq                              
+
+********************************************************************************
+
+No action on new best correct
+Progress Update: 
+
+Lowest Cost Discovered (3)     Lowest Known Correct Cost (3)     
+                                                                 
+._Z6popcntm:                   ._Z6popcntm:                      
+movl $0xfffffff9, %eax         movl $0xfffffff9, %eax            
+popcntq %rdi, %rcx             popcntq %rdi, %rcx                
+movzwl %cx, %eax               movzwl %cx, %eax                  
+retq                           retq                              
+
+********************************************************************************
+
+No action on new best correct
+Progress Update: 
+
+Lowest Cost Discovered (2)     Lowest Known Correct Cost (2)     
+                                                                 
+._Z6popcntm:                   ._Z6popcntm:                      
+popcntq %rdi, %rcx             popcntq %rdi, %rcx                
+movzwl %cx, %eax               movzwl %cx, %eax                  
+retq                           retq                              
+
+********************************************************************************
+
+Statistics Update: 
+
+Iterations:                    100000
+Elapsed Time:                  0.5394s
+Iterations/s:                  185391
+
+Starting cost:                 23
+Lowest cost:                   2
+Lowest correct cost:           2
+
+Move Type       Proposed     Succeeded     Accepted     
+                                                        
+Add Nops        0%           0%            0%           
+Delete          0%           0%            0%           
+Instruction     25.127%      1.288%        0.721%       
+Opcode          25.015%      9.204%        7.432%       
+OpcodeWidth     0%           0%            0%           
+Operand         25.029%      13.864%       10.078%      
+Local Swap      24.829%      2.795%        2.625%       
+Global Swap     0%           0%            0%           
+Rotate          0%           0%            0%           
+                                                        
+Total           100%         27.151%       20.856%      
+
+********************************************************************************
+
+Statistics Update: 
+
+Iterations:                    200000
+Elapsed Time:                  1.02168s
+Iterations/s:                  195756
+
+Starting cost:                 23
+Lowest cost:                   2
+Lowest correct cost:           2
+
+Move Type       Proposed     Succeeded     Accepted     
+                                                        
+Add Nops        0%           0%            0%           
+Delete          0%           0%            0%           
+Instruction     25.11%       1.139%        0.6525%      
+Opcode          24.9605%     9.7545%       8.228%       
+OpcodeWidth     0%           0%            0%           
+Operand         25.0045%     12.0605%      8.9215%      
+Local Swap      24.925%      2.3215%       2.068%       
+Global Swap     0%           0%            0%           
+Rotate          0%           0%            0%           
+                                                        
+Total           100%         25.2755%      19.87%       
+
+********************************************************************************
+
+Statistics Update: 
+
+Iterations:                    300000
+Elapsed Time:                  1.51197s
+Iterations/s:                  198416
+
+Starting cost:                 23
+Lowest cost:                   2
+Lowest correct cost:           2
+
+Move Type       Proposed     Succeeded     Accepted      
+                                                         
+Add Nops        0%           0%            0%            
+Delete          0%           0%            0%            
+Instruction     25.107%      1.10433%      0.628667%     
+Opcode          24.9637%     10.0013%      8.50967%      
+OpcodeWidth     0%           0%            0%            
+Operand         24.9577%     11.507%       8.67567%      
+Local Swap      24.9717%     2.23867%      1.888%        
+Global Swap     0%           0%            0%            
+Rotate          0%           0%            0%            
+                                                         
+Total           100%         24.8513%      19.702%       
+
+********************************************************************************
+
+Statistics Update: 
+
+Iterations:                    400000
+Elapsed Time:                  1.98474s
+Iterations/s:                  201538
+
+Starting cost:                 23
+Lowest cost:                   2
+Lowest correct cost:           2
+
+Move Type       Proposed     Succeeded     Accepted     
+                                                        
+Add Nops        0%           0%            0%           
+Delete          0%           0%            0%           
+Instruction     25.0708%     1.1525%       0.66%        
+Opcode          24.9943%     9.71075%      8.01475%     
+OpcodeWidth     0%           0%            0%           
+Operand         24.9638%     11.3323%      8.77025%     
+Local Swap      24.9713%     2.31525%      1.9075%      
+Global Swap     0%           0%            0%           
+Rotate          0%           0%            0%           
+                                                        
+Total           100%         24.5108%      19.3525%     
+
+********************************************************************************
+
+Statistics Update: 
+
+Iterations:                    500000
+Elapsed Time:                  2.41867s
+Iterations/s:                  206725
+
+Starting cost:                 23
+Lowest cost:                   2
+Lowest correct cost:           2
+
+Move Type       Proposed     Succeeded     Accepted     
+                                                        
+Add Nops        0%           0%            0%           
+Delete          0%           0%            0%           
+Instruction     25.0418%     1.1022%       0.6432%      
+Opcode          24.9732%     9.3898%       7.6948%      
+OpcodeWidth     0%           0%            0%           
+Operand         24.9814%     11.0114%      8.5822%      
+Local Swap      25.0036%     2.2054%       1.8248%      
+Global Swap     0%           0%            0%           
+Rotate          0%           0%            0%           
+                                                        
+Total           100%         23.7088%      18.745%      
+
+********************************************************************************
+
+Statistics Update: 
+
+Iterations:                    600000
+Elapsed Time:                  2.86856s
+Iterations/s:                  209164
+
+Starting cost:                 23
+Lowest cost:                   2
+Lowest correct cost:           2
+
+Move Type       Proposed     Succeeded     Accepted     
+                                                        
+Add Nops        0%           0%            0%           
+Delete          0%           0%            0%           
+Instruction     25.0773%     1.0705%       0.626%       
+Opcode          24.9993%     9.30017%      7.646%       
+OpcodeWidth     0%           0%            0%           
+Operand         24.9532%     10.8283%      8.4475%      
+Local Swap      24.9702%     2.15%         1.77783%     
+Global Swap     0%           0%            0%           
+Rotate          0%           0%            0%           
+                                                        
+Total           100%         23.349%       18.4973%     
+
+********************************************************************************
+
+Statistics Update: 
+
+Iterations:                    700000
+Elapsed Time:                  3.35731s
+Iterations/s:                  208500
+
+Starting cost:                 23
+Lowest cost:                   2
+Lowest correct cost:           2
+
+Move Type       Proposed     Succeeded     Accepted      
+                                                         
+Add Nops        0%           0%            0%            
+Delete          0%           0%            0%            
+Instruction     25.0531%     1.04514%      0.618143%     
+Opcode          24.9824%     9.54729%      7.87229%      
+OpcodeWidth     0%           0%            0%            
+Operand         24.9989%     10.743%       8.41629%      
+Local Swap      24.9656%     2.085%        1.72357%      
+Global Swap     0%           0%            0%            
+Rotate          0%           0%            0%            
+                                                         
+Total           100%         23.4204%      18.6303%      
+
+********************************************************************************
+
+No action on new best correct
+Progress Update: 
+
+Lowest Cost Discovered (1)     Lowest Known Correct Cost (1)     
+                                                                 
+._Z6popcntm:                   ._Z6popcntm:                      
+popcntq %rdi, %rax             popcntq %rdi, %rax                
+retq                           retq                              
+
+********************************************************************************
+
+Statistics Update: 
+
+Iterations:                    800000
+Elapsed Time:                  3.84812s
+Iterations/s:                  207894
+
+Starting cost:                 23
+Lowest cost:                   1
+Lowest correct cost:           1
+
+Move Type       Proposed     Succeeded     Accepted     
+                                                        
+Add Nops        0%           0%            0%           
+Delete          0%           0%            0%           
+Instruction     25.0354%     1.09013%      0.64425%     
+Opcode          24.9917%     9.56575%      7.86325%     
+OpcodeWidth     0%           0%            0%           
+Operand         25.0034%     10.7711%      8.5575%      
+Local Swap      24.9695%     2.12712%      1.76275%     
+Global Swap     0%           0%            0%           
+Rotate          0%           0%            0%           
+                                                        
+Total           100%         23.5541%      18.8278%     
+
+********************************************************************************
+
+Statistics Update: 
+
+Iterations:                    900000
+Elapsed Time:                  4.35177s
+Iterations/s:                  206812
+
+Starting cost:                 23
+Lowest cost:                   1
+Lowest correct cost:           1
+
+Move Type       Proposed     Succeeded     Accepted      
+                                                         
+Add Nops        0%           0%            0%            
+Delete          0%           0%            0%            
+Instruction     25.0359%     1.16811%      0.693333%     
+Opcode          25.002%      9.56411%      7.81044%      
+OpcodeWidth     0%           0%            0%            
+Operand         24.9894%     10.8806%      8.81944%      
+Local Swap      24.9727%     2.20033%      1.83522%      
+Global Swap     0%           0%            0%            
+Rotate          0%           0%            0%            
+                                                         
+Total           100%         23.8131%      19.1584%      
+
+********************************************************************************
+
+Statistics Update: 
+
+Iterations:                    1000000
+Elapsed Time:                  4.85735s
+Iterations/s:                  205874
+
+Starting cost:                 23
+Lowest cost:                   1
+Lowest correct cost:           1
+
+Move Type       Proposed     Succeeded     Accepted     
+                                                        
+Add Nops        0%           0%            0%           
+Delete          0%           0%            0%           
+Instruction     25.0215%     1.2212%       0.7273%      
+Opcode          24.9938%     9.5583%       7.7854%      
+OpcodeWidth     0%           0%            0%           
+Operand         24.983%      10.9939%      9.0535%      
+Local Swap      25.0017%     2.2529%       1.8887%      
+Global Swap     0%           0%            0%           
+Rotate          0%           0%            0%           
+                                                        
+Total           100%         24.0263%      19.4549%     
+
+********************************************************************************
+
+################################################################################
+
+Final update:
+
+Total search iterations:       1000000
+Number of attempted searches:  1
+Total search time:             4.85769s
+Total time:                    5.37054s
+
+Statistics of last search
+
+Iterations:                    1000000
+Elapsed Time:                  4.85756s
+Iterations/s:                  205865
+
+Starting cost:                 23
+Lowest cost:                   1
+Lowest correct cost:           1
+
+Move Type       Proposed     Succeeded     Accepted     
+                                                        
+Add Nops        0%           0%            0%           
+Delete          0%           0%            0%           
+Instruction     25.0215%     1.2212%       0.7273%      
+Opcode          24.9938%     9.5583%       7.7854%      
+OpcodeWidth     0%           0%            0%           
+Operand         24.983%      10.9939%      9.0535%      
+Local Swap      25.0017%     2.2529%       1.8887%      
+Global Swap     0%           0%            0%           
+Rotate          0%           0%            0%           
+                                                        
+Total           100%         24.0263%      19.4549%     
+
+Lowest Cost Discovered (1)     Lowest Known Correct Cost (1)     
+                                                                 
+._Z6popcntm:                   ._Z6popcntm:                      
+popcntq %rdi, %rax             popcntq %rdi, %rax                
+retq                           retq                              
+
+################################################################################
+
+Search terminated successfully with a verified rewrite!
+stoke@4002948e3ce4:~/stoke$ cd bins
+stoke@4002948e3ce4:~/stoke/bins$ cat _Z6popcntm.s 
+  .text
+  .globl _Z6popcntm
+  .type _Z6popcntm, @function
+
+#! file-offset 0x580
+#! rip-offset  0x400580
+#! capacity    48 bytes
+
+# Text              #  Line  RIP       Bytes  Opcode             
+._Z6popcntm:        #        0x400580  0      OPC=<label>        
+  testq %rdi, %rdi  #  1     0x400580  3      OPC=testq_r64_r64  
+  je .L_40059f      #  2     0x400583  2      OPC=je_label       
+  xorl %eax, %eax   #  3     0x400585  2      OPC=xorl_r32_r32   
+  nop               #  4     0x400587  1      OPC=nop            
+  nop               #  5     0x400588  1      OPC=nop            
+  nop               #  6     0x400589  1      OPC=nop            
+  nop               #  7     0x40058a  1      OPC=nop            
+  nop               #  8     0x40058b  1      OPC=nop            
+  nop               #  9     0x40058c  1      OPC=nop            
+  nop               #  10    0x40058d  1      OPC=nop            
+  nop               #  11    0x40058e  1      OPC=nop            
+  nop               #  12    0x40058f  1      OPC=nop            
+.L_400590:          #        0x400590  0      OPC=<label>        
+  movl %edi, %edx   #  13    0x400590  2      OPC=movl_r32_r32   
+  andl $0x1, %edx   #  14    0x400592  3      OPC=andl_r32_imm8  
+  addl %edx, %eax   #  15    0x400595  2      OPC=addl_r32_r32   
+  shrq $0x1, %rdi   #  16    0x400597  3      OPC=shrq_r64_one   
+  jne .L_400590     #  17    0x40059a  2      OPC=jne_label      
+  cltq              #  18    0x40059c  2      OPC=cltq           
+  retq              #  19    0x40059e  1      OPC=retq           
+.L_40059f:          #        0x40059f  0      OPC=<label>        
+  xorl %eax, %eax   #  20    0x40059f  2      OPC=xorl_r32_r32   
+  retq              #  21    0x4005a1  1      OPC=retq           
+  nop               #  22    0x4005a2  1      OPC=nop            
+  nop               #  23    0x4005a3  1      OPC=nop            
+  nop               #  24    0x4005a4  1      OPC=nop            
+  nop               #  25    0x4005a5  1      OPC=nop            
+  nop               #  26    0x4005a6  1      OPC=nop            
+  nop               #  27    0x4005a7  1      OPC=nop            
+  nop               #  28    0x4005a8  1      OPC=nop            
+  nop               #  29    0x4005a9  1      OPC=nop            
+  nop               #  30    0x4005aa  1      OPC=nop            
+  nop               #  31    0x4005ab  1      OPC=nop            
+  nop               #  32    0x4005ac  1      OPC=nop            
+  nop               #  33    0x4005ad  1      OPC=nop            
+  nop               #  34    0x4005ae  1      OPC=nop            
+  nop               #  35    0x4005af  1      OPC=nop            
+                                                                 
+.size _Z6popcntm, .-_Z6popcntm
+
