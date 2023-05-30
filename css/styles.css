@@ -118,7 +118,7 @@ code,
 kbd,
 samp {
 	font-family: monospace, serif;
-	_font-family: 'comic sans', monospace;
+	_font-family: 'courier new', monospace;
 	font-size: 1em
 }
 
@@ -316,7 +316,7 @@ table {
 }
 
 body {
-	font-size: 18px;
+	font-size: 15px;
 	line-height: 22px;
 	font-family: 'Quattrocento Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: rgb(96, 118, 132);
