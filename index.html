@@ -13,7 +13,6 @@
             font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
             color: #333;
-            text-align: center;
             margin: 0;
             padding: 0;
         }
@@ -21,6 +20,7 @@
             background: linear-gradient(135deg, #0073e6, #00b4d8);
             color: white;
             padding: 40px 20px;
+            text-align: center;
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
         }
@@ -35,12 +35,12 @@
             margin-top: 10px;
         }
         .wrapper {
-            max-width: 800px;
-            margin: auto;
+            max-width: 900px;
+            margin: 40px auto;
             background: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
         a {
             color: #0073e6;
@@ -48,18 +48,22 @@
             font-weight: bold;
         }
         ul {
-            text-align: left;
             list-style: none;
             padding: 0;
         }
-        ul li {
-            padding: 5px 0;
+        ul li::before {
+            content: "✔️ ";
+            color: #0073e6;
         }
         h2 {
             color: #0073e6;
-            margin-top: 20px;
+            margin-top: 30px;
+            border-bottom: 2px solid #0073e6;
+            display: inline-block;
+            padding-bottom: 5px;
         }
         footer {
+            text-align: center;
             font-size: 14px;
             padding: 20px;
             color: gray;
@@ -73,30 +77,36 @@
         <p>Researcher at Fraunhofer HHI, Berlin 🇩🇪</p>
     </header>
     <div class="wrapper">
-        <h2>🔬 Interests</h2>
-        <ul>
-            <li>💻 Software Engineering</li>
-            <li>📡 Radio Algorithm Development</li>
-            <li>🛜 Software Defined Networking & VNF</li>
-            <li>📶 Telecommunication Systems Engineering</li>
-            <li>📲 Wireless Communications</li>
-        </ul>
-        <h2>💼 Work Experience</h2>
-        <p>🔹 5G RAN Researcher, Fraunhofer HHI (2024 - Present)</p>
-        <p>🔹 Cloud Native 5G Developer, Ericsson (2022 - 2023)</p>
-        <p>🔹 Radio Algorithm Developer, Ericsson (2020 - 2022)</p>
-        <h2>📚 Education</h2>
-        <p>🎓 M.Sc in IT Project Management, Stockholm University (2021 - 2023)</p>
-        <p>🎓 M.Sc in Communication Systems, KTH Royal Institute of Technology (2018 - 2020)</p>
-        <p>🎓 B.E. in Electronics, Sardar Patel Institute of Technology (2014 - 2018)</p>
-        <h2>📞 Contact</h2>
-        <p>📧 Email: shrinish.donde[at]hhi.fraunhofer.de</p>
-        <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/shrinish-donde/">shrinish Donde</a></p>
-        <p>🐙 GitHub: <a href="https://www.github.com/shrin18">shrinish Donde</a></p>
-        <p>📱 Phone: +49 1522 4202916</p>
+        <section>
+            <h2>🔬 Interests</h2>
+            <ul>
+                <li>Software Engineering</li>
+                <li>Radio Algorithm Development</li>
+                <li>Software Defined Networking & VNF</li>
+                <li>Telecommunication Systems Engineering</li>
+                <li>Wireless Communications</li>
+            </ul>
+            <h2>💼 Work Experience</h2>
+            <p><strong>5G RAN Researcher</strong> - Fraunhofer HHI (2024 - Present)</p>
+            <p><strong>Cloud Native 5G Developer</strong> - Ericsson (2022 - 2023)</p>
+            <p><strong>Radio Algorithm Developer</strong> - Ericsson (2020 - 2022)</p>
+            <h2>📚 Education</h2>
+            <p>M.Sc in IT Project Management, Stockholm University (2021 - 2023)</p>
+            <p>M.Sc in Communication Systems, KTH Royal Institute of Technology (2018 - 2020)</p>
+            <p>B.E. in Electronics, Sardar Patel Institute of Technology (2014 - 2018)</p>
+            <h2>📜 Publications</h2>
+            <p><a href="https://dl.acm.org/doi/10.1145/3397537.3397567">Superoptimization of WebAssembly Bytecode</a> (ACM Digital Library)</p>
+            <p><a href="https://ieeexplore.ieee.org/document/8550941">Hard Decoding Based Design of Regular LDPC using Labview</a> (IEEE Xplore)</p>
+            <p><a href="https://ieeexplore.ieee.org/document/8697798">Optimal Robot Localisation Techniques in Real World Scenarios</a> (IEEE Xplore)</p>
+            <h2>📞 Contact</h2>
+            <p>📧 Email: shrinish.donde[at]hhi.fraunhofer.de</p>
+            <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/shrinish-donde/">Shrinish Donde</a></p>
+            <p>🐙 GitHub: <a href="https://www.github.com/shrin18">Shrinish Donde</a></p>
+            <p>📱 Phone: +49 1522 4202916</p>
+        </section>
     </div>
     <footer>
-        <p>✨ Designed with ❤️ by Shrinesh Donde ✨</p>
+        <p>✨ Designed with ❤️ by Shrinish Donde ✨</p>
     </footer>
 </body>
 </html>
