@@ -2,83 +2,178 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Shrinish Donde</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrinish Donde | Researcher & Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #1f2937;
+            --light-gray: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+        
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
         header {
-            background: linear-gradient(135deg, #0073e6, #00b4d8);
-            color: white;
-            padding: 40px 20px;
             text-align: center;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
         }
-        header img {
-            width: 120px;
-            height: 120px;
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            border: 3px solid white;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+        
         h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: #4b5563;
+            margin-bottom: 24px;
+        }
+        
+        section {
+            margin-bottom: 48px;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-top: 10px;
+            color: #111827;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border-color);
         }
-        .wrapper {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        
+        p, li {
+            margin-bottom: 12px;
+            color: #374151;
+            font-size: 1.05rem;
         }
-        a {
-            color: #0073e6;
-            text-decoration: none;
-            font-weight: bold;
-        }
+        
         ul {
             list-style: none;
-            padding: 0;
+            margin-left: 0;
+            padding-left: 0;
         }
-        ul li::before {
-            content: "✔️ ";
-            color: #0073e6;
+        
+        ul li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
         }
-        h2 {
-            color: #0073e6;
-            margin-top: 30px;
-            border-bottom: 2px solid #0073e6;
-            display: inline-block;
-            padding-bottom: 5px;
+        
+        ul li:before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+        
+        .experience-item {
+            margin-bottom: 24px;
+        }
+        
+        .experience-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #111827;
+        }
+        
+        .experience-item .meta {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        
         footer {
             text-align: center;
-            font-size: 14px;
-            padding: 20px;
-            color: gray;
+            padding: 40px 0;
+            color: #6b7280;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 1.875rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="images/shrinish.jpg" alt="Shrinish Donde">
-        <h1>👨‍💻 Shrinish Donde</h1>
-        <p>Researcher at Fraunhofer HHI, Berlin 🇩🇪</p>
+    <header class="header">
+        <div class="container">
+            <img src="images/shrinish.jpg" alt="Shrinish Donde" class="profile-image">
+            <h1>Shrinish Donde</h1>
+            <p class="subtitle">Researcher at Fraunhofer HHI, Berlin</p>
+        </div>
     </header>
-    <div class="wrapper">
+    
+    <main class="container">
         <section>
-            <h2>🔬 Interests</h2>
+            <h2>About Me</h2>
+            <p>I'm a researcher and developer with expertise in wireless communications and software engineering, currently working on 5G RAN technologies at Fraunhofer HHI in Berlin.</p>
+        </section>
+        
+        <section>
+            <h2>Research Interests</h2>
             <ul>
                 <li>Software Engineering</li>
                 <li>Radio Algorithm Development</li>
@@ -86,29 +181,70 @@
                 <li>Telecommunication Systems Engineering</li>
                 <li>Wireless Communications</li>
             </ul>
-            <h2>💼 Work Experience</h2>
-            <p><strong>5G RAN Researcher</strong> - Fraunhofer HHI (2024 - Present)</p>
-            <p><strong>Cloud Native 5G Developer</strong> - Ericsson (2022 - 2023)</p>
-            <p><strong>Radio Algorithm Developer</strong> - Ericsson (2020 - 2022)</p>
-            <h2>📚 Education</h2>
-            <p>M.Sc in IT Project Management, Stockholm University (2021 - 2023)</p>
-            <p>M.Sc in Communication Systems, KTH Royal Institute of Technology (2018 - 2020)</p>
-            <p>B.E. in Electronics, Sardar Patel Institute of Technology (2014 - 2018)</p>
-            <h2>📜 Publications</h2>
-            <p><a href="https://dl.acm.org/doi/10.1145/3397537.3397567">Superoptimization of WebAssembly Bytecode</a> (ACM Digital Library)</p>
-            <p><a href="https://ieeexplore.ieee.org/document/8550941">Hard Decoding Based Design of Regular LDPC using Labview</a> (IEEE Xplore)</p>
-            <p><a href="https://ieeexplore.ieee.org/document/8697798">Optimal Robot Localisation Techniques in Real World Scenarios</a> (IEEE Xplore)</p>
-            <h2>📞 Contact</h2>
-            <p>📧 Email: shrinish.donde[at]hhi.fraunhofer.de</p>
-            <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/shrinish-donde/">Shrinish Donde</a></p>
-            <p>🐙 GitHub: <a href="https://www.github.com/shrin18">Shrinish Donde</a></p>
-            <h2>🌍 Travel & Fun</h2>
-            <p>✈️ I also write a travel blog! Check it out here: <a href="https://reachingnewplaces.wordpress.com/" target="_blank">Reaching New Places</a></p>
-            <p>📸 We run a travel page on Instagram: <a href="https://www.instagram.com/mappingfootsteps/" target="_blank">Mapping Footsteps</a></p>
         </section>
-    </div>
+        
+        <section>
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>5G RAN Researcher</h3>
+                <div class="meta">Fraunhofer HHI • 2024 - Present • Berlin, Germany</div>
+            </div>
+            <div class="experience-item">
+                <h3>Cloud Native 5G Developer</h3>
+                <div class="meta">Ericsson • 2022 - 2023 • Stockholm, Sweden</div>
+            </div>
+            <div class="experience-item">
+                <h3>Radio Algorithm Developer</h3>
+                <div class="meta">Ericsson • 2020 - 2022 • Stockholm, Sweden</div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Education</h2>
+            <div class="experience-item">
+                <h3>M.Sc in IT Project Management</h3>
+                <div class="meta">Stockholm University • 2021 - 2023</div>
+            </div>
+            <div class="experience-item">
+                <h3>M.Sc in Communication Systems</h3>
+                <div class="meta">KTH Royal Institute of Technology • 2018 - 2020</div>
+            </div>
+            <div class="experience-item">
+                <h3>B.E. in Electronics Engineering</h3>
+                <div class="meta">Sardar Patel Institute of Technology • 2014 - 2018</div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Publications</h2>
+            <ul>
+                <li><a href="https://dl.acm.org/doi/10.1145/3397537.3397567" target="_blank">Superoptimization of WebAssembly Bytecode</a> (ACM Digital Library)</li>
+                <li><a href="https://ieeexplore.ieee.org/document/8550941" target="_blank">Hard Decoding Based Design of Regular LDPC using Labview</a> (IEEE Xplore)</li>
+                <li><a href="https://ieeexplore.ieee.org/document/8697798" target="_blank">Optimal Robot Localisation Techniques in Real World Scenarios</a> (IEEE Xplore)</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:shrinish.donde@hhi.fraunhofer.de">shrinish.donde[at]hhi.fraunhofer.de</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/shrinish-donde/" target="_blank">Shrinish Donde</a></p>
+            <p>GitHub: <a href="https://www.github.com/shrin18" target="_blank">shrin18</a></p>
+        </section>
+        
+        <section>
+            <h2>Travel & Photography</h2>
+            <p>I'm passionate about exploring new places and capturing moments through photography. Check out my travel blog and photography work:</p>
+            <ul>
+                <li><a href="https://reachingnewplaces.wordpress.com/" target="_blank">Reaching New Places</a> - My travel blog</li>
+                <li><a href="https://www.instagram.com/mappingfootsteps/" target="_blank">Mapping Footsteps</a> - Travel photography on Instagram</li>
+            </ul>
+        </section>
+    </main>
+    
     <footer>
-        <p>✨ Designed with ❤️ by Shrinish Donde ✨</p>
+        <div class="container">
+            <p>© 2024 Shrinish Donde. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
