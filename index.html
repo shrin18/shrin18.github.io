@@ -66,6 +66,29 @@
             margin-bottom: 24px;
         }
         
+        .main-nav {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .main-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+        
         section {
             margin-bottom: 48px;
         }
@@ -162,17 +185,26 @@
         <div class="container">
             <img src="images/shrinish.jpg" alt="Shrinish Donde" class="profile-image">
             <h1>Shrinish Donde</h1>
-            <p class="subtitle">Researcher at Fraunhofer HHI, Berlin</p>
+            <p class="subtitle">Researcher at <a href="https://www.hhi.fraunhofer.de/" target="_blank" style="color: inherit; text-decoration: none;">Fraunhofer HHI</a>, Berlin</p>
+            
+            <nav class="main-nav">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
     
     <main class="container">
-        <section>
+        <section id="about">
             <h2>About Me</h2>
             <p>I'm a researcher and developer with expertise in wireless communications and software engineering, currently working on 5G RAN technologies at Fraunhofer HHI in Berlin.</p>
         </section>
         
-        <section>
+        <section id="research">
             <h2>Research Interests</h2>
             <ul>
                 <li>Software Engineering</li>
@@ -183,40 +215,41 @@
             </ul>
         </section>
         
-        <section>
+        <section id="experience">
             <h2>Work Experience</h2>
             <div class="experience-item">
                 <h3>5G RAN Researcher</h3>
-                <div class="meta">Fraunhofer HHI • 2024 - Present • Berlin, Germany</div>
+                <div class="meta"><a href="https://www.hhi.fraunhofer.de/" target="_blank">Fraunhofer HHI</a> • 2024 - Present • Berlin, Germany</div>
             </div>
             <div class="experience-item">
                 <h3>Cloud Native 5G Developer</h3>
-                <div class="meta">Ericsson • 2022 - 2023 • Stockholm, Sweden</div>
+                <div class="meta"><a href="https://www.ericsson.com/" target="_blank">Ericsson</a> • 2022 - 2023 • Stockholm, Sweden</div>
             </div>
             <div class="experience-item">
                 <h3>Radio Algorithm Developer</h3>
-                <div class="meta">Ericsson • 2020 - 2022 • Stockholm, Sweden</div>
+                <div class="meta"><a href="https://www.ericsson.com/" target="_blank">Ericsson</a> • 2020 - 2022 • Stockholm, Sweden</div>
             </div>
         </section>
         
-        <section>
+        <section id="education">
             <h2>Education</h2>
             <div class="experience-item">
                 <h3>M.Sc in IT Project Management</h3>
-                <div class="meta">Stockholm University • 2021 - 2023</div>
+                <div class="meta"><a href="https://www.su.se/" target="_blank">Stockholm University</a> • 2021 - 2023</div>
             </div>
             <div class="experience-item">
                 <h3>M.Sc in Communication Systems</h3>
-                <div class="meta">KTH Royal Institute of Technology • 2018 - 2020</div>
+                <div class="meta"><a href="https://www.kth.se/en" target="_blank">KTH Royal Institute of Technology</a> • 2018 - 2020</div>
             </div>
             <div class="experience-item">
                 <h3>B.E. in Electronics Engineering</h3>
-                <div class="meta">Sardar Patel Institute of Technology • 2014 - 2018</div>
+                <div class="meta"><a href="https://www.spit.ac.in/" target="_blank">Sardar Patel Institute of Technology</a> • 2014 - 2018</div>
             </div>
         </section>
         
-        <section>
+        <section id="publications">
             <h2>Publications</h2>
+            <p>View my complete list of publications on <a href="https://scholar.google.com/citations?hl=en&user=659bzegAAAAJ" target="_blank">Google Scholar</a>.</p>
             <ul>
                 <li><a href="https://dl.acm.org/doi/10.1145/3397537.3397567" target="_blank">Superoptimization of WebAssembly Bytecode</a> (ACM Digital Library)</li>
                 <li><a href="https://ieeexplore.ieee.org/document/8550941" target="_blank">Hard Decoding Based Design of Regular LDPC using Labview</a> (IEEE Xplore)</li>
@@ -225,7 +258,7 @@
         </section>
         
         <section>
-            <h2>Contact</h2>
+            <h2 id="contact">Contact</h2>
             <p>Email: <a href="mailto:shrinish.donde@hhi.fraunhofer.de">shrinish.donde[at]hhi.fraunhofer.de</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/shrinish-donde/" target="_blank">Shrinish Donde</a></p>
             <p>GitHub: <a href="https://www.github.com/shrin18" target="_blank">shrin18</a></p>
@@ -243,7 +276,7 @@
     
     <footer>
         <div class="container">
-            <p>© 2024 Shrinish Donde. All rights reserved.</p>
+            <p>© 2025 Shrinish Donde. All rights reserved. Made with ❤️ using <a href="https://windsurf.com" target="_blank" style="color: inherit;">Windsurf</a></p>
         </div>
     </footer>
 </body>
