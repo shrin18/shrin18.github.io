@@ -9,10 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2563eb;
+            --primary-color: #3b82f6;  /* Brighter blue */
+            --primary-dark: #2563eb;
+            --primary-light: #93c5fd;
             --text-color: #1f2937;
             --light-gray: #f9fafb;
             --border-color: #e5e7eb;
+            --gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
         }
         
         * {
@@ -25,32 +28,65 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: var(--text-color);
-            background-color: #ffffff;
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.05) 1px, transparent 0);
+            background-size: 30px 30px;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            overflow-x: hidden;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 32px;
+            position: relative;
+            z-index: 1;
         }
         
         header {
             text-align: center;
-            padding: 60px 0 40px;
-            border-bottom: 1px solid var(--border-color);
+            padding: 80px 0 60px;
             margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
+            z-index: 0;
         }
         
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
-            border: 4px solid #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 5px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
         }
         
         h1 {
@@ -90,16 +126,39 @@
         }
         
         section {
-            margin-bottom: 48px;
+            margin-bottom: 64px;
+            position: relative;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
         
         h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #111827;
-            margin-bottom: 20px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--border-color);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
         }
         
         p, li {
@@ -140,7 +199,17 @@
         }
         
         .experience-item {
-            margin-bottom: 24px;
+            margin-bottom: 28px;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f8fafc;
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .experience-item:hover {
+            background: #f1f5f9;
+            transform: translateX(5px);
         }
         
         .experience-item h3 {
@@ -158,11 +227,23 @@
         
         footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 50px 0;
             color: #6b7280;
             font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-            margin-top: 40px;
+            position: relative;
+            background: white;
+            margin-top: 60px;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 100' fill='%23f8fafc' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,70 C150,10 350,40 550,50 C750,60 900,20 1150,30 C1300,40 1440,80 1440,80 L1440,100 L0,100 Z' fill='%23f8fafc'/%3E%3C/svg%3E") no-repeat center bottom;
+            background-size: cover;
         }
         
         @media (max-width: 640px) {
@@ -185,7 +266,7 @@
         <div class="container">
             <img src="images/shrinish.jpg" alt="Shrinish Donde" class="profile-image">
             <h1>Shrinish Donde</h1>
-            <p class="subtitle">Researcher at <a href="https://www.hhi.fraunhofer.de/" target="_blank" style="color: inherit; text-decoration: none;">Fraunhofer HHI</a>, Berlin</p>
+            <p class="subtitle" style="color: white;">Software Developer at <a href="https://www.hhi.fraunhofer.de/" target="_blank" style="color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.5);">HHI</a>, Berlin</p>
             
             <nav class="main-nav">
                 <a href="#about">About</a>
@@ -201,7 +282,7 @@
     <main class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>I'm a researcher and developer with expertise in wireless communications and software engineering, currently working on 5G RAN technologies at Fraunhofer HHI in Berlin.</p>
+            <p>I'm a researcher and developer with expertise in wireless communications and software engineering, currently working on 5G RAN technologies at Fraunhofer HHI in Berlin. My work focuses on advancing next-generation wireless networks through innovative research and development.</p>
         </section>
         
         <section id="research">
@@ -276,7 +357,7 @@
     
     <footer>
         <div class="container">
-            <p>© 2025 Shrinish Donde. All rights reserved. Made with ❤️ using <a href="https://windsurf.com" target="_blank" style="color: inherit;">Windsurf</a></p>
+            <p>© 2025 Shrinish Donde. All rights reserved. Made with ❤️ using <a href="https://windsurf.com" target="_blank" style="color: var(--primary-color); font-weight: 500;">Windsurf</a></p>
         </div>
     </footer>
 </body>
