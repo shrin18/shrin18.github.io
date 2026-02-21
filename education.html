@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Shrinish Donde</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --primary-dark: #2563eb;
+            --primary-light: #93c5fd;
+            --text-color: #1f2937;
+            --light-gray: #f9fafb;
+            --border-color: #e5e7eb;
+            --gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --bg-color: #ffffff;
+            --surface-color: #f8fafc;
+            --card-bg: #ffffff;
+            --card-shadow: rgba(0, 0, 0, 0.05);
+            --text-secondary: #6b7280;
+        }
+
+        [data-theme="dark"] {
+            --text-color: #e5e7eb;
+            --light-gray: #1f2937;
+            --border-color: #374151;
+            --bg-color: #111827;
+            --surface-color: #0f172a;
+            --card-bg: #1f2937;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+            --text-secondary: #d1d5db;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, var(--surface-color) 0%, var(--bg-color) 100%);
+            position: relative;
+            z-index: 1;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        #network-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 32px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 0 60px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 20%), radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
+            z-index: 0;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #f3f4f6;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-nav {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+
+        section {
+            margin-bottom: 64px;
+            position: relative;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--card-shadow);
+        }
+
+        p, li {
+            margin-bottom: 12px;
+            color: var(--text-color);
+            font-size: 1.05rem;
+        }
+
+        .education-item {
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .education-item:hover {
+            background: var(--light-gray);
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px var(--card-shadow);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            animation: pulse 2s ease-in-out infinite;
+            box-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .education-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--text-color);
+        }
+
+        .education-item .meta {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        .degree-badge {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            position: relative;
+            background: var(--card-bg);
+            margin-top: 60px;
+            transition: background-color 0.3s ease;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 1.875rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="network-canvas"></canvas>
+    <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+
+    <header class="header">
+        <div class="container">
+            <h1>Shrinish Donde</h1>
+            <p class="subtitle">Education & Learning</p>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="experience.html">Experience</a>
+                <a href="education.html" class="active">Education</a>
+                <a href="projects.html">Projects</a>
+                <a href="publications.html">Publications</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="timeline-dot"></div>
+                <h3>M.Sc in IT Project Management</h3>
+                <div class="meta"><a href="https://www.su.se/" target="_blank">Stockholm University</a> • 2021 - 2023</div>
+                <span class="degree-badge">Master's Degree</span>
+                <p>Specialized in strategic project management, organizational change, and IT governance. Thesis focused on cloud transformation strategies.</p>
+            </div>
+
+            <div class="education-item">
+                <div class="timeline-dot"></div>
+                <h3>M.Sc in Communication Systems</h3>
+                <div class="meta"><a href="https://www.kth.se/en" target="_blank">KTH Royal Institute of Technology</a> • 2018 - 2020</div>
+                <span class="degree-badge">Master's Degree</span>
+                <p>Advanced studies in wireless communications, signal processing, and network architecture. Specialized in 5G technologies and antenna design.</p>
+            </div>
+
+            <div class="education-item">
+                <div class="timeline-dot"></div>
+                <h3>B.E. in Electronics Engineering</h3>
+                <div class="meta"><a href="https://www.spit.ac.in/" target="_blank">Sardar Patel Institute of Technology</a> • 2014 - 2018</div>
+                <span class="degree-badge">Bachelor's Degree</span>
+                <p>Comprehensive engineering education with focus on telecommunications, signal processing, and embedded systems design.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications & Skills</h2>
+            <p><strong>Languages:</strong> English (Native), German (B1.1), Swedish (A2)</p>
+            <p><strong>Technical Skills:</strong> C++, Python, Java, MATLAB, Kubernetes, Docker, Linux, Signal Processing, Algorithm Design</p>
+            <p><strong>Tools & Frameworks:</strong> Git, JIRA, Jenkins, Grafana, OpenStack, ROS, USRP</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Shrinish Donde. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Network Canvas Animation
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const particles = [];
+        const particleCount = 50;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.radius = Math.random() * 2 + 1;
+                this.color = Math.random() > 0.5 ? '#3b82f6' : '#8b5cf6';
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+                this.x = Math.max(0, Math.min(canvas.width, this.x));
+                this.y = Math.max(0, Math.min(canvas.height, this.y));
+            }
+
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.shadowColor = this.color;
+                ctx.shadowBlur = 10;
+            }
+        }
+
+        function initParticles() {
+            particles.length = 0;
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function drawConnections() {
+            const maxDistance = 200;
+            ctx.shadowColor = 'transparent';
+
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < maxDistance) {
+                        const opacity = (1 - distance / maxDistance) * 0.4;
+                        ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            drawConnections();
+            requestAnimationFrame(animate);
+        }
+
+        initParticles();
+        animate();
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        function updateThemeIcon(theme) {
+            themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    </script>
+</body>
+</html>
