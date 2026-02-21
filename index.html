@@ -814,6 +814,115 @@
             margin: 0;
             font-style: italic;
         }
+
+        .riddle-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .riddle-item {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .riddle-item:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 15px var(--card-shadow);
+        }
+
+        .riddle-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .riddle-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .riddle-option {
+            padding: 12px 15px;
+            background: var(--light-gray);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .riddle-option:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .riddle-option input[type="radio"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .riddle-option.selected {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .quiz-button {
+            background: var(--gradient);
+            color: white;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .quiz-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .quiz-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .quiz-results {
+            background: var(--light-gray);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 30px;
+            border: 2px solid var(--border-color);
+        }
+
+        .quiz-results h3 {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        .quiz-score {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 20px 0;
+        }
+
+        .quiz-results p {
+            color: var(--text-secondary);
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -828,6 +937,7 @@
             
             <nav class="main-nav">
                 <a href="index.html" class="active">Home</a>
+                <a href="#riddle">Riddle</a>
                 <a href="experience.html">Experience</a>
                 <a href="education.html">Education</a>
                 <a href="projects.html">Projects</a>
@@ -895,6 +1005,114 @@
                         <p>A.P.J. Abdul Kalam</p>
                     </div>
                 </a>
+            </div>
+        </section>
+
+        <section id="riddle">
+            <h2>World Knowledge Quiz</h2>
+            <p style="margin-bottom: 30px; color: var(--text-secondary);">Test your general knowledge about our world! Select your answer and submit to see your score!</p>
+            
+            <div class="riddle-container">
+                <form id="riddle-form">
+                    <div class="riddle-item">
+                        <div class="riddle-question">1. The area of Berlin is approximately how many times the area of Sydney?</div>
+                        <div class="riddle-options">
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle1" value="half" required> About half
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle1" value="same"> About the same
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle1" value="4times"> About 4 times larger
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle1" value="10times"> About 10 times larger
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="riddle-item">
+                        <div class="riddle-question">2. Which is the smallest country in the world by area?</div>
+                        <div class="riddle-options">
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle2" value="monaco" required> Vatican City
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle2" value="monaco2"> Monaco
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle2" value="malta"> Malta
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle2" value="liechtenstein"> Liechtenstein
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="riddle-item">
+                        <div class="riddle-question">3. Which is the largest desert in the world?</div>
+                        <div class="riddle-options">
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle3" value="sahara" required> Sahara Desert
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle3" value="kalahari"> Kalahari Desert
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle3" value="arabian"> Arabian Desert
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle3" value="gobi"> Gobi Desert
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="riddle-item">
+                        <div class="riddle-question">4. The Mariana Trench is approximately how deep (the deepest ocean point)?</div>
+                        <div class="riddle-options">
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle4" value="7km" required> About 11 km
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle4" value="5km"> About 5 km
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle4" value="8km"> About 8 km
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle4" value="15km"> About 15 km
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="riddle-item">
+                        <div class="riddle-question">5. Which language has the most native speakers in the world?</div>
+                        <div class="riddle-options">
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle5" value="mandarin" required> Mandarin Chinese
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle5" value="english"> English
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle5" value="spanish"> Spanish
+                            </label>
+                            <label class="riddle-option">
+                                <input type="radio" name="riddle5" value="hindi"> Hindi
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="quiz-button">Submit Answers</button>
+                </form>
+                
+                <div id="quiz-results" class="quiz-results" style="display: none;">
+                    <h3>Your Results</h3>
+                    <div class="quiz-score" id="score-display">0/5</div>
+                    <p id="score-message"></p>
+                    <button class="quiz-button" onclick="location.reload()">Try Again</button>
+                </div>
             </div>
         </section>
     </main>
@@ -1135,6 +1353,56 @@
                 }, 200);
             });
         });
+
+        // Riddle Quiz Handler
+        const riddleForm = document.getElementById('riddle-form');
+        const quizResults = document.getElementById('quiz-results');
+        const scoreDisplay = document.getElementById('score-display');
+        const scoreMessage = document.getElementById('score-message');
+
+        const correctAnswers = {
+            riddle1: '4times',
+            riddle2: 'monaco',
+            riddle3: 'sahara',
+            riddle4: '7km',
+            riddle5: 'mandarin'
+        };
+
+        if (riddleForm) {
+            riddleForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(riddleForm);
+                let score = 0;
+
+                for (const [key, answer] of formData.entries()) {
+                    if (correctAnswers[key] === answer) {
+                        score++;
+                    }
+                }
+
+                const percentage = (score / 5) * 100;
+                scoreDisplay.textContent = `${score}/5`;
+
+                let message = '';
+                if (percentage === 100) {
+                    message = 'Perfect! You are a riddle master! 🎯';
+                } else if (percentage >= 80) {
+                    message = 'Excellent! You got most of them right! 🌟';
+                } else if (percentage >= 60) {
+                    message = 'Good job! You demonstrated solid riddle-solving skills! 👍';
+                } else if (percentage >= 40) {
+                    message = 'Not bad! Keep practicing your logical thinking! 💭';
+                } else {
+                    message = 'Keep trying! Riddles get easier with practice! 💪';
+                }
+
+                scoreMessage.textContent = message;
+                riddleForm.style.display = 'none';
+                quizResults.style.display = 'block';
+                quizResults.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
 
         // Contact Form Handler
         const contactForm = document.getElementById('contact-form');
