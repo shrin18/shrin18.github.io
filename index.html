@@ -699,6 +699,121 @@
         .counter {
             font-variant-numeric: tabular-nums;
         }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0 40px 0;
+        }
+
+        .interest-card {
+            background: var(--light-gray);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .interest-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+            background: var(--card-bg);
+        }
+
+        .interest-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .interest-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .interest-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .playlist {
+            margin: 30px 0;
+        }
+
+        .music-player {
+            background: var(--light-gray);
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .music-player:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 15px var(--card-shadow);
+        }
+
+        .music-player h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .music-player iframe {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .book-shelf {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .book-card {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            border: none;
+        }
+
+        .book-card:hover {
+            transform: translateY(-8px) rotateZ(2deg);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+        }
+
+        .book-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .book-card h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .book-card p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin: 0;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -712,13 +827,12 @@
             <p class="subtitle" style="color: white;">Software Developer at <a href="https://www.adtran.com/en" target="_blank" style="color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.5);">Adtran</a>, Berlin</p>
             
             <nav class="main-nav">
-                <a href="#about">About</a>
-                <a href="#research">Research</a>
-                <a href="#experience">Experience</a>
-                <a href="#education">Education</a>
-                <a href="#achievements">Achievements</a>
-                <a href="#publications">Publications</a>
-                <a href="#contact">Contact</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="experience.html">Experience</a>
+                <a href="education.html">Education</a>
+                <a href="projects.html">Projects</a>
+                <a href="publications.html">Publications</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
@@ -726,182 +840,68 @@
     <main class="container">
         <section id="about">
             <h2>About Me</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number counter">5</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number counter">15</div>
-                    <div class="stat-label">Tech Skills</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number counter">8</div>
-                    <div class="stat-label">Publications</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number counter">3</div>
-                    <div class="stat-label">Companies</div>
-                </div>
-            </div>
             <p>I'm a passionate engineer with a strong background in telecommunications and software development, currently working as Engineer Advanced Technology at Adtran Networks SE in Berlin. With expertise in 5G RAN technologies and wireless communications, I specialize in developing innovative solutions for next-generation networks. My engineering approach combines technical depth with practical problem-solving to create robust and efficient systems.</p>
         </section>
-        
-        <section id="research">
-            <h2>Research Interests</h2>
-            <div class="skills-container">
-                <div class="skill-badge">📡 5G/6G</div>
-                <div class="skill-badge">🔧 Software Engineering</div>
-                <div class="skill-badge">📊 Radio Algorithms</div>
-                <div class="skill-badge">☁️ SDN & VNF</div>
-                <div class="skill-badge">📶 Wireless Comm</div>
-                <div class="skill-badge">🚀 Network Design</div>
-            </div>
-        </section>
-        
-        <section id="experience">
-            <h2>Work Experience</h2>
-            <div class="experience-item">
-                <div class="timeline-dot"></div>
-                <h3>Engineer Advanced Technology</h3>
-                <div class="meta"><a href="https://www.adtran.com/en" target="_blank">Adtran Networks SE</a> • Sept. 2025 - Present • Berlin, Germany</div>
-                <div class="progress-bar"><div class="progress-fill" style="--progress-width: 5%"></div></div>
-                <div>
-                    <span class="tech-tag">5G RAN</span>
-                    <span class="tech-tag">Network Architecture</span>
-                    <span class="tech-tag">C++</span>
+
+        <section id="interests">
+            <h2>Interests & Hobbies</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon">�</div>
+                    <h3>Reading</h3>
+                    <p>I love diving into books about technology, philosophy, and science fiction. Currently exploring topics in AI and network design.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Piano</h3>
+                    <p>Playing piano is my creative outlet. Classical pieces and jazz improvisation help me unwind after intense coding sessions.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Travel</h3>
+                    <p>Exploring new cultures and landscapes. Check out my travel blog and photography on Instagram.</p>
                 </div>
             </div>
-            <div class="experience-item">
-                <div class="timeline-dot"></div>
-                <h3>5G RAN Researcher</h3>
-                <div class="meta"><a href="https://www.hhi.fraunhofer.de/" target="_blank">Fraunhofer HHI</a> • Jan 2024 - Sept 2025 • 1 year 9 months • Berlin, Germany</div>
-                <div class="progress-bar"><div class="progress-fill" style="--progress-width: 35%"></div></div>
-                <div>
-                    <span class="tech-tag">5G</span>
-                    <span class="tech-tag">RAN Research</span>
-                    <span class="tech-tag">Algorithm Design</span>
-                    <span class="tech-tag">Python</span>
+
+            <h3 style="margin-top: 40px; margin-bottom: 20px;">Music</h3>
+            <div class="playlist">
+                <div class="music-player">
+                    <h4>River Flows in You</h4>
+                    <iframe style="border-radius:12px; display: block; margin: 0 auto;" width="100%" height="315" src="https://www.youtube.com/embed/7maJOI3QMu0" title="River Flows in You - Yiruma" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="experience-item">
-                <div class="timeline-dot"></div>
-                <h3>Cloud Native 5G Developer</h3>
-                <div class="meta"><a href="https://www.ericsson.com/" target="_blank">Ericsson</a> • May 2022 - Dec 2023 • 1 year 8 months • Stockholm, Sweden</div>
-                <div class="progress-bar"><div class="progress-fill" style="--progress-width: 65%"></div></div>
-                <div>
-                    <span class="tech-tag">Kubernetes</span>
-                    <span class="tech-tag">Cloud Native</span>
-                    <span class="tech-tag">Docker</span>
-                    <span class="tech-tag">Java</span>
-                </div>
-            </div>
-            <div class="experience-item">
-                <div class="timeline-dot"></div>
-                <h3>Radio Algorithm Developer</h3>
-                <div class="meta"><a href="https://www.ericsson.com/" target="_blank">Ericsson</a> • Sep 2020 - Apr 2022 • 1 year 8 months • Stockholm, Sweden</div>
-                <div class="progress-bar"><div class="progress-fill" style="--progress-width: 80%"></div></div>
-                <div>
-                    <span class="tech-tag">Radio Algorithms</span>
-                    <span class="tech-tag">Signal Processing</span>
-                    <span class="tech-tag">C++</span>
-                    <span class="tech-tag">MATLAB</span>
-                </div>
-            </div>
-        </section>
-        
-        <section id="education">
-            <h2>Education</h2>
-            <div class="experience-item">
-                <h3>M.Sc in IT Project Management</h3>
-                <div class="meta"><a href="https://www.su.se/" target="_blank">Stockholm University</a> • 2021 - 2023</div>
-            </div>
-            <div class="experience-item">
-                <h3>M.Sc in Communication Systems</h3>
-                <div class="meta"><a href="https://www.kth.se/en" target="_blank">KTH Royal Institute of Technology</a> • 2018 - 2020</div>
-            </div>
-            <div class="experience-item">
-                <h3>B.E. in Electronics Engineering</h3>
-                <div class="meta"><a href="https://www.spit.ac.in/" target="_blank">Sardar Patel Institute of Technology</a> • 2014 - 2018</div>
-            </div>
-        </section>
-        
-        <section id="achievements">
-            <h2>Achievements</h2>
-            <div class="experience-item">
-                <h3>OpenAirInterface Spring of Code 1st Prize</h3>
-                <div class="meta">Awarded July 2024</div>
-                <p>Achieved first place in the OpenAirInterface Spring of Code competition for outstanding contributions to open-source 5G development.</p>
-            </div>
-            <div class="experience-item">
-                <h3>German Language Certification (B1.2)</h3>
-                <div class="meta">Completed with "Gut" Grade at TelcGmbh</div>
-                <div class="language-level">
-                    <span class="level-dot filled"></span>
-                    <span class="level-dot filled"></span>
-                    <span class="level-dot filled"></span>
-                    <span class="level-dot"></span>
-                    <span class="level-dot"></span>
-                    <span class="level-label">B1.1</span>
-                </div>
-                <p>Successfully completed B1.1 level German language certification through intensive online study.</p>
-            </div>
-        </section>
-        
-        <section id="publications">
-            <h2>Publications</h2>
-            <p>View my complete list of publications on <a href="https://scholar.google.com/citations?hl=en&user=659bzegAAAAJ" target="_blank">Google Scholar</a>.</p>
-            <ul>
-                <li><a href="https://dl.acm.org/doi/10.1145/3397537.3397567" target="_blank">Superoptimization of WebAssembly Bytecode</a> (ACM Digital Library)</li>
-                <li><a href="https://ieeexplore.ieee.org/document/8550941" target="_blank">Hard Decoding Based Design of Regular LDPC using Labview</a> (IEEE Xplore)</li>
-                <li><a href="https://ieeexplore.ieee.org/document/8697798" target="_blank">Optimal Robot Localisation Techniques in Real World Scenarios</a> (IEEE Xplore)</li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2 id="contact">Contact</h2>
-            <p>Email: <a href="mailto:shdonde@gmail.com">shdonde[at]gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/shrinish-donde/" target="_blank">Shrinish Donde</a></p>
-            <p>GitHub: <a href="https://www.github.com/shrin18" target="_blank">shrin18</a></p>
-            
-            <div class="contact-form">
-                <h3 style="margin-top: 30px; margin-bottom: 20px;">Send me a message</h3>
-                <form id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+
+            <h3 style="margin-top: 40px; margin-bottom: 20px;">Currently Reading</h3>
+            <div class="book-shelf">
+                <a href="https://www.goodreads.com/book/show/40399258-ikigai" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="book-card">
+                        <h4>Ikigai</h4>
+                        <p>Héctor García & Francesc Miralles</p>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                </a>
+                <a href="https://www.goodreads.com/book/show/40121378-atomic-habits" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="book-card">
+                        <h4>Atomic Habits</h4>
+                        <p>James Clear</p>
                     </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
+                </a>
+                <a href="https://www.goodreads.com/book/show/69571.Rich_Dad_Poor_Dad" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="book-card">
+                        <h4>Rich Dad Poor Dad</h4>
+                        <p>Robert Kiyosaki</p>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
+                </a>
+                <a href="https://www.goodreads.com/book/show/97412.Wings_of_Fire" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="book-card">
+                        <h4>Wings of Fire</h4>
+                        <p>A.P.J. Abdul Kalam</p>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                    <div class="form-message" id="form-message"></div>
-                </form>
+                </a>
             </div>
-        </section>
-        
-        <section>
-            <h2>Travel & Photography</h2>
-            <p>I'm passionate about exploring new places and capturing moments through photography. Check out my travel blog and photography work:</p>
-            <ul>
-                <li><a href="https://reachingnewplaces.wordpress.com/" target="_blank">Reaching New Places</a> - My travel blog</li>
-                <li><a href="https://www.instagram.com/mappingfootsteps/" target="_blank">Mapping Footsteps</a> - Travel photography on Instagram</li>
-            </ul>
         </section>
     </main>
     
     <footer>
         <div class="container">
-            <p>© 2025 Shrinish Donde. All rights reserved. Made with ❤️</p>
+            <p>© 2025 Shrinish Donde. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1001,17 +1001,17 @@
         initParticles();
         animate();
 
-        // Dark Mode Toggle
+        // Dark Mode Toggle - Initialize first
         const themeToggle = document.getElementById('theme-toggle');
         const htmlElement = document.documentElement;
-        
-        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        htmlElement.setAttribute('data-theme', savedTheme);
-        updateThemeIcon(savedTheme);
         
         function updateThemeIcon(theme) {
             themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
         }
+        
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
         
         themeToggle.addEventListener('click', () => {
             const currentTheme = htmlElement.getAttribute('data-theme');

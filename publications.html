@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience | Shrinish Donde</title>
+    <title>Publications | Shrinish Donde</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -180,45 +180,58 @@
             font-size: 1.05rem;
         }
 
-        .experience-item {
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-left: 1.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            padding: 15px;
-            border-radius: 8px;
+        ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
         }
 
-        .experience-item:hover {
+        ul li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 16px;
+        }
+
+        ul li:before {
+            content: "📄";
+            position: absolute;
+            left: 0;
+        }
+
+        .publication-item {
+            margin-bottom: 2rem;
+            padding: 15px;
+            border-left: 4px solid var(--primary-color);
             background: var(--light-gray);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .publication-item:hover {
+            background: var(--border-color);
             transform: translateX(5px);
             box-shadow: 0 4px 12px var(--card-shadow);
         }
 
-        .timeline-dot {
-            position: absolute;
-            left: 0;
-            top: 0.5rem;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            animation: pulse 2s ease-in-out infinite;
-            box-shadow: 0 0 10px var(--primary-color);
-        }
-
-        .experience-item h3 {
-            font-size: 1.1rem;
+        .publication-item h3 {
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+            font-size: 1rem;
             font-weight: 600;
-            margin-bottom: 4px;
-            color: var(--text-color);
         }
 
-        .experience-item .meta {
+        .publication-item .authors {
             color: var(--text-secondary);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .publication-item .journal {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
         a {
@@ -232,49 +245,20 @@
             text-decoration: underline;
         }
 
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: var(--border-color);
-            border-radius: 4px;
-            overflow: hidden;
-            margin: 10px 0;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: var(--gradient);
-            border-radius: 4px;
-            animation: slideIn 1s ease forwards;
-            animation-delay: 0.2s;
-        }
-
-        @keyframes slideIn {
-            from {
-                width: 0;
-            }
-            to {
-                width: var(--progress-width);
-            }
-        }
-
-        .tech-tag {
+        .scholar-link {
             display: inline-block;
-            background: rgba(59, 130, 246, 0.1);
-            color: var(--primary-color);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin: 5px 5px 5px 0;
-            border: 1px solid var(--primary-color);
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
-        .tech-tag:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: scale(1.05);
+        .scholar-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
         }
 
         footer {
@@ -314,26 +298,6 @@
             box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
-        }
-
         @media (max-width: 640px) {
             h1 {
                 font-size: 1.875rem;
@@ -356,14 +320,14 @@
     <header class="header">
         <div class="container">
             <h1>Shrinish Donde</h1>
-            <p class="subtitle">Work Experience</p>
+            <p class="subtitle">Publications & Research</p>
 
             <nav class="main-nav">
                 <a href="index.html">Home</a>
-                <a href="experience.html" class="active">Experience</a>
+                <a href="experience.html">Experience</a>
                 <a href="education.html">Education</a>
                 <a href="projects.html">Projects</a>
-                <a href="publications.html">Publications</a>
+                <a href="publications.html" class="active">Publications</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
@@ -371,66 +335,36 @@
 
     <main class="container">
         <section>
-            <h2>Work Experience</h2>
-            <div class="experience-item">
-                <div class="timeline-dot"></div>
-                <h3>Engineer Advanced Technology</h3>
-                <div class="meta"><a href="https://www.adtran.com/en" target="_blank">Adtran Networks SE</a> • Sept. 2025 - Present • Berlin, Germany</div>
-                <div class="progress-bar"><div class="progress-fill" style="--progress-width: 5%"></div></div>
-                <p>Leading development of next-generation telecom solutions.</p>
-                <div>
-                    <span class="tech-tag">5G RAN</span>
-                    <span class="tech-tag">Network Architecture</span>
-                    <span class="tech-tag">C++</span>
-                    <span class="tech-tag">System Design</span>
-                </div>
+            <h2>Recent Publications</h2>
+            
+            <div class="publication-item">
+                <h3>Superoptimization of WebAssembly Bytecode</h3>
+                <div class="authors">Shrinish Donde et al.</div>
+                <div class="journal">ACM Digital Library, 2020</div>
+                <a href="https://dl.acm.org/doi/10.1145/3397537.3397567" target="_blank">View Publication →</a>
             </div>
 
-            <div class="experience-item">
-                <div class="timeline-dot"></div>
-                <h3>5G RAN Researcher</h3>
-                <div class="meta"><a href="https://www.hhi.fraunhofer.de/" target="_blank">Fraunhofer HHI</a> • Jan 2024 - Sept 2025 • 1 year 9 months • Berlin, Germany</div>
-                <div class="progress-bar"><div class="progress-fill" style="--progress-width: 35%"></div></div>
-                <p>Conducted cutting-edge research in 5G Radio Access Networks, focusing on algorithm optimization and performance enhancement.</p>
-                <div>
-                    <span class="tech-tag">5G</span>
-                    <span class="tech-tag">RAN Research</span>
-                    <span class="tech-tag">Algorithm Design</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Signal Processing</span>
-                </div>
+            <div class="publication-item">
+                <h3>Hard Decoding Based Design of Regular LDPC using Labview</h3>
+                <div class="authors">Shrinish Donde et al.</div>
+                <div class="journal">IEEE Xplore, 2018</div>
+                <a href="https://ieeexplore.ieee.org/document/8550941" target="_blank">View Publication →</a>
             </div>
 
-            <div class="experience-item">
-                <div class="timeline-dot"></div>
-                <h3>Cloud Native 5G Developer</h3>
-                <div class="meta"><a href="https://www.ericsson.com/" target="_blank">Ericsson</a> • May 2022 - Dec 2023 • 1 year 8 months • Stockholm, Sweden</div>
-                <div class="progress-bar"><div class="progress-fill" style="--progress-width: 65%"></div></div>
-                <p>Developed cloud-native 5G solutions using Kubernetes and microservices architecture, improving deployment efficiency by 40%.</p>
-                <div>
-                    <span class="tech-tag">Kubernetes</span>
-                    <span class="tech-tag">Cloud Native</span>
-                    <span class="tech-tag">Docker</span>
-                    <span class="tech-tag">Java</span>
-                    <span class="tech-tag">Microservices</span>
-                    <span class="tech-tag">CI/CD</span>
-                </div>
+            <div class="publication-item">
+                <h3>Optimal Robot Localisation Techniques in Real World Scenarios</h3>
+                <div class="authors">Shrinish Donde et al.</div>
+                <div class="journal">IEEE Xplore, 2019</div>
+                <a href="https://ieeexplore.ieee.org/document/8697798" target="_blank">View Publication →</a>
             </div>
+        </section>
 
-            <div class="experience-item">
-                <div class="timeline-dot"></div>
-                <h3>Radio Algorithm Developer</h3>
-                <div class="meta"><a href="https://www.ericsson.com/" target="_blank">Ericsson</a> • Sep 2020 - Apr 2022 • 1 year 8 months • Stockholm, Sweden</div>
-                <div class="progress-bar"><div class="progress-fill" style="--progress-width: 80%"></div></div>
-                <p>Developed and optimized radio algorithms for 4G/5G networks. Authored patents for novel antenna configurations.</p>
-                <div>
-                    <span class="tech-tag">Radio Algorithms</span>
-                    <span class="tech-tag">Signal Processing</span>
-                    <span class="tech-tag">C++</span>
-                    <span class="tech-tag">MATLAB</span>
-                    <span class="tech-tag">LTE/NR</span>
-                </div>
-            </div>
+        <section>
+            <h2>Additional Resources</h2>
+            <a href="https://scholar.google.com/citations?hl=en&user=659bzegAAAAJ" target="_blank" class="scholar-link">
+                View Complete Publication List on Google Scholar
+            </a>
+            <p style="margin-top: 20px;">For more information about my research, patents, and contributions, please visit my Google Scholar profile or contact me directly.</p>
         </section>
     </main>
 
