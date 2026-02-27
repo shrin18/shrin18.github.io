@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ask Me Anything | Shrinish Donde</title>
+    <title>About Me | Shrinish Donde</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -40,6 +40,16 @@
             box-sizing: border-box;
         }
 
+        #network-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
@@ -71,6 +81,7 @@
             color: white;
             border-radius: 0 0 30px 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            z-index: 10;
         }
 
         header::before {
@@ -397,319 +408,359 @@
     </style>
 </head>
 <body>
+    <canvas id="network-canvas"></canvas>
     <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">🌙</button>
-    
-    <header class="header">
+
+    <header>
         <div class="container">
-            <h1>Ask Me Anything 💬</h1>
-            <p>Powered by AI - Get instant answers about my work, projects, and interests</p>
-            
+            <h1>Shrinish Donde</h1>
+            <p class="subtitle">Get to know me better</p>
+
             <nav class="main-nav">
                 <a href="index.html">Home</a>
                 <a href="experience.html">Experience</a>
                 <a href="education.html">Education</a>
                 <a href="projects.html">Projects</a>
                 <a href="publications.html">Publications</a>
-                <a href="ask.html" class="active">Ask Me</a>
+                <a href="ask.html" class="active">About Me</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
-    
+
     <main class="container">
-        <div class="setup-info">
-            <h3>🚀 Setup Required</h3>
-            <p>The chat is currently not connected to an AI service. To enable it, follow these quick steps:</p>
-            <ol>
-                <li><strong>Option 1 (Easiest):</strong> Get a free API key from <a href="https://huggingface.co" target="_blank">HuggingFace</a>, then edit ask.html and replace YOUR_HUGGING_FACE_API_KEY_HERE with your key</li>
-                <li><strong>Option 2 (Local):</strong> Install <a href="https://ollama.ai" target="_blank">Ollama</a>, run it, then change provider to 'ollama' in the code below</li>
-                <li>Reload this page and start chatting!</li>
-            </ol>
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="switchTab('faq')">FAQ</button>
+            <button class="tab-btn" onclick="switchTab('skills')">Skills & Tech</button>
+            <button class="tab-btn" onclick="switchTab('quick')">Quick Facts</button>
         </div>
 
-        <div class="chat-container">
-            <div class="chat-messages" id="chat-messages">
-                <div class="chat-message bot-message">
-                    <div class="message-content">Hi there! 👋 I'm an AI assistant trained on information about Shrinish's background, expertise, and interests. Ask me anything about:</div>
+        <!-- FAQ Section -->
+        <div id="faq" class="tab-content active">
+            <h2 style="margin-bottom: 30px; text-align: center;">Frequently Asked Questions</h2>
+            
+            <div class="accordion-item open">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>What do you currently do?</span>
+                    <span class="accordion-toggle">▼</span>
                 </div>
-                <div class="chat-message bot-message">
-                    <div class="message-content">• My work at Adtran in Berlin (5G RAN, wireless communications)
-• Projects and technical expertise
-• Education and certifications
-• Interests: reading, piano, travel
-• Publications and research
-• Or anything else you'd like to know!</div>
+                <div class="accordion-content">
+                    <p>I'm an Engineer Advanced Technology at <strong>Adtran Networks SE</strong> in Berlin, Germany (since Sept 2025). I work on development of next-generation telecom solutions with a focus on 5G RAN technology and network architecture.</p>
+                    <p>Previously, I conducted cutting-edge 5G RAN research at Fraunhofer HHI for 1 year 9 months, optimizing algorithms and enhancing network performance.</p>
                 </div>
             </div>
-            <div class="chat-input-wrapper">
-                <form id="chat-form" onsubmit="handleChatSubmit(event)">
-                    <input type="text" id="chat-input" placeholder="Ask me anything..." autocomplete="off" required>
-                    <button type="submit" class="chat-send-btn">
-                        <span>Send</span>
-                        <span class="send-icon">→</span>
-                    </button>
-                </form>
-                <p class="chat-info">⚡ Powered by <a href="https://huggingface.co" target="_blank" style="color: inherit; text-decoration: underline;">HuggingFace API</a> or <a href="https://ollama.ai" target="_blank" style="color: inherit; text-decoration: underline;">Ollama</a></p>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>What's your background in 5G?</span>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p>My expertise is in <strong>5G Radio Access Networks (RAN)</strong> - the technology that enables wireless communication. I've worked on:</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">RAN Algorithm Design</span>
+                        <span class="skill-tag">Network Optimization</span>
+                        <span class="skill-tag">Performance Enhancement</span>
+                        <span class="skill-tag">System Design</span>
+                    </div>
+                    <p style="margin-top: 15px;">I combine theoretical research with practical implementation, focusing on real-world network solutions.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>What's your technical skill set?</span>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p><strong>Languages:</strong> Python (research & prototyping), C++ (systems), MATLAB (algorithm development), JavaScript (full-stack)</p>
+                    <p><strong>Core Skills:</strong> 5G RAN, Network Architecture, Algorithm Design, System Design, Performance Optimization</p>
+                    <p><strong>Research & Development:</strong> Algorithm optimization, Network simulation, Protocol implementation</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>What are your interests beyond work?</span>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p><strong>🎹 Piano:</strong> Classical pieces and jazz improvisation - my creative outlet</p>
+                    <p><strong>📚 Reading:</strong> Technology, philosophy, science fiction, and network design</p>
+                    <p><strong>✈️ Travel:</strong> Exploring new cultures and landscapes - I run a travel YouTube channel called <a href="https://www.youtube.com/@mappingfootsteps" target="_blank" style="color: var(--primary-color);">Mapping Footsteps</a> with my wife</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>Where are you based?</span>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p>I'm currently based in <strong>Berlin, Germany</strong>, where I work at Adtran Networks SE. Berlin offers an incredible tech scene, culture, and it's a perfect hub for both telecommunications innovation and personal growth.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>How can I get in touch?</span>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Feel free to reach out through my <a href="contact.html" style="color: var(--primary-color);">contact page</a>, or connect with me on professional networks. I'm always interested in discussing 5G, technology, travel, or collaboration opportunities.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div id="skills" class="tab-content">
+            <h2 style="margin-bottom: 30px; text-align: center;">Skills & Technology</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>🔬 Core Expertise</h3>
+                    <ul class="skill-list">
+                        <li>5G RAN Technology</li>
+                        <li>Network Architecture</li>
+                        <li>Algorithm Design & Optimization</li>
+                        <li>System Design</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>💻 Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>MATLAB</li>
+                        <li>JavaScript</li>
+                        <li>Bash Scripting</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🧠 Domains</h3>
+                    <ul class="skill-list">
+                        <li>Wireless Communications</li>
+                        <li>Network Research</li>
+                        <li>Telecom Innovation</li>
+                        <li>Research Development</li>
+                        <li>Full-Stack Web Dev</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🛠️ Tools & Technologies</h3>
+                    <ul class="skill-list">
+                        <li>Network Simulators</li>
+                        <li>Git & Version Control</li>
+                        <li>Linux/Unix</li>
+                        <li>Software Testing</li>
+                        <li>Documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Facts Section -->
+        <div id="quick" class="tab-content">
+            <h2 style="margin-bottom: 30px; text-align: center;">Quick Facts About Me</h2>
+            
+            <div class="accordion-item open">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>📍 Current Role</span>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p><strong>Engineer Advanced Technology</strong> at Adtran Networks SE, Berlin</p>
+                    <p>Developing next-generation telecom solutions</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>🌍 Location</span>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Berlin, Germany 🇩🇪</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>🎯 Passion</span>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p>5G RAN Technology & Next-Generation Networks</p>
+                    <p>Building robust, efficient telecom systems</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>🎬 YouTube Channel</span>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p><a href="https://www.youtube.com/@mappingfootsteps" target="_blank" style="color: var(--primary-color);">Mapping Footsteps</a> - Travel adventures with my wife 🗺️</p>
+                    <p>We document cultural explorations and travel experiences across the globe.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>📖 Blog</span>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p><a href="https://reachingnewplaces.wordpress.com" target="_blank" style="color: var(--primary-color);">Reaching New Places</a> - Travel & life experiences</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>🎓 Education</span>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Advanced studies in telecommunications and software engineering</p>
+                    <p><a href="education.html" style="color: var(--primary-color);">See full education details →</a></p>
+                </div>
             </div>
         </div>
     </main>
-    
+
     <footer>
         <p>© 2025 Shrinish Donde. All rights reserved.</p>
     </footer>
 
     <script>
-        // Dark Mode Toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const htmlElement = document.documentElement;
+        // Network Canvas Animation
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
         
-        function updateThemeIcon(theme) {
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const particles = [];
+        const particleCount = 50;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.radius = Math.random() * 2 + 1;
+                this.color = Math.random() > 0.5 ? '#3b82f6' : '#8b5cf6';
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+                this.x = Math.max(0, Math.min(canvas.width, this.x));
+                this.y = Math.max(0, Math.min(canvas.height, this.y));
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        function drawConnections() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 150) {
+                        ctx.strokeStyle = `rgba(59, 130, 246, ${0.2 * (1 - distance / 150)})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            drawConnections();
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            html.setAttribute('data-theme', savedTheme);
+            updateThemeButton(savedTheme);
+        }
+
+        function updateThemeButton(theme) {
             themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
         }
-        
-        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        htmlElement.setAttribute('data-theme', savedTheme);
-        updateThemeIcon(savedTheme);
-        
+
         themeToggle.addEventListener('click', () => {
-            const currentTheme = htmlElement.getAttribute('data-theme');
+            const currentTheme = html.getAttribute('data-theme') || 'light';
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            htmlElement.setAttribute('data-theme', newTheme);
+            html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme);
+            updateThemeButton(newTheme);
         });
 
-        // Chat Widget Elements
-        const chatMessages = document.getElementById('chat-messages');
-        const chatInput = document.getElementById('chat-input');
-        const chatForm = document.getElementById('chat-form');
-        const chatSendBtn = document.querySelector('.chat-send-btn');
+        loadTheme();
 
-        // Enhanced system prompt with detailed profile information
-        const systemPrompt = `You are a helpful AI assistant representing Shrinish Donde. Here's your knowledge base:
+        // Tab Switching
+        function switchTab(tabName) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            const tabButtons = document.querySelectorAll('.tab-btn');
 
-PROFESSIONAL BACKGROUND:
-- Currently working as Engineer Advanced Technology at Adtran Networks SE, Berlin
-- Expertise in 5G RAN technologies and wireless communications
-- Strong background in telecommunications and software development
-- Focuses on next-generation network solutions
+            tabContents.forEach(tab => tab.classList.remove('active'));
+            tabButtons.forEach(btn => btn.classList.remove('active'));
 
-TECHNICAL SKILLS:
-- 5G RAN (Radio Access Network)
-- Wireless communications
-- Software development
-- Network design and optimization
-
-INTERESTS & HOBBIES:
-- Reading: Technology, philosophy, science fiction, AI, network design
-- Piano: Classical and jazz pieces
-- Travel: Exploring new cultures and landscapes
-
-EDUCATION:
-- Researcher and Developer
-- Advanced studies in telecommunications and software engineering
-
-PERSONALITY:
-- Passionate engineer combining technical depth with practical problem-solving
-- Creates robust and efficient systems
-- Collaborative and solution-oriented
-
-You should:
-1. Answer questions about Shrinish's work, projects, and interests
-2. Be friendly, professional, and concise
-3. Provide helpful information even if asked about general topics, but try to relate back to Shrinish when possible
-4. Keep responses under 200 words
-5. Be honest about what you know and don't know`;
-
-        // AI Configuration
-        const AI_CONFIG = {
-            provider: 'ollama', // 'huggingface' or 'ollama'
-            huggingface: {
-                apiKey: 'YOUR_HUGGING_FACE_API_KEY_HERE',
-                model: 'gpt2'
-            },
-            ollama: {
-                baseUrl: 'http://localhost:11434',
-                model: 'mistral'
-            }
-        };
-
-        async function getChatResponse(userMessage) {
-            try {
-                if (AI_CONFIG.provider === 'huggingface') {
-                    return await getHuggingFaceResponse(userMessage);
-                } else if (AI_CONFIG.provider === 'ollama') {
-                    return await getOllamaResponse(userMessage);
-                }
-            } catch (error) {
-                console.error('Chat error:', error);
-                return "I encountered an error. Make sure you've set up an API key or have Ollama running. Check the setup instructions at the top of this page.";
-            }
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
         }
 
-        async function getHuggingFaceResponse(userMessage) {
-            const apiKey = AI_CONFIG.huggingface.apiKey;
-            
-            if (apiKey === 'YOUR_HUGGING_FACE_API_KEY_HERE') {
-                return `I'm not connected to an AI service yet. To enable me:
-
-1. Get a free API key from https://huggingface.co (free tier: 25,000 calls/month)
-2. Edit ask.html and find this line: apiKey: 'YOUR_HUGGING_FACE_API_KEY_HERE',
-3. Replace it with: apiKey: 'hf_yourActualKeyHere',
-4. Reload this page
-
-Or use Ollama for a fully local, zero-cost solution!`;
-            }
-
-            try {
-                // Create a focused prompt about Shrinish
-                const focusedPrompt = `You are an AI assistant answering questions about Shrinish Donde, a software engineer at Adtran in Berlin specializing in 5G RAN technology.
-
-Question: ${userMessage}
-
-Answer briefly (1-2 sentences) based on his profile: Engineer at Adtran Networks SE, Berlin. Expertise in 5G RAN, wireless communications, interests in reading (tech/philosophy), piano, and travel.`;
-
-                const response = await fetch(
-                    `https://api-inference.huggingface.co/models/${AI_CONFIG.huggingface.model}`,
-                    {
-                        headers: { 
-                            Authorization: `Bearer ${apiKey}`,
-                            'Content-Type': 'application/json'
-                        },
-                        method: 'POST',
-                        body: JSON.stringify({
-                            inputs: focusedPrompt,
-                            options: {
-                                use_cache: false,
-                                wait_for_model: true
-                            }
-                        }),
-                    }
-                );
-
-                if (!response.ok) {
-                    const errorData = await response.json().catch(() => ({}));
-                    console.error('API Response:', errorData);
-                    
-                    if (response.status === 401) {
-                        throw new Error('Invalid API key. Check your key on huggingface.co');
-                    } else if (response.status === 429) {
-                        throw new Error('Rate limited. Try again in a moment.');
-                    } else if (response.status === 503) {
-                        throw new Error('Model loading. This can take a minute on first request, please retry.');
-                    }
-                    throw new Error(`API error: ${response.status} - ${errorData.error || 'Unknown error'}`);
-                }
-
-                const result = await response.json();
-                
-                if (Array.isArray(result) && result.length > 0) {
-                    const text = result[0].generated_text || '';
-                    // Clean up the generated text
-                    const lines = text.split('\n').filter(line => line.trim());
-                    const response_text = lines[lines.length - 1] || text;
-                    return response_text.trim().slice(0, 400) || "I couldn't generate a response. Please try again.";
-                }
-                
-                return "No response generated. Please try again.";
-            } catch (error) {
-                console.error('Chat error details:', error);
-                return `Error: ${error.message}\n\nTips:\n- Verify your API key is valid (starts with 'hf_')\n- Check you have API calls remaining (25,000/month free)\n- Wait a moment and try again`;
-            }
+        // Accordion Toggle
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            item.classList.toggle('open');
         }
-
-        async function getOllamaResponse(userMessage) {
-            try {
-                const response = await fetch(
-                    `${AI_CONFIG.ollama.baseUrl}/api/generate`,
-                    {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                            model: AI_CONFIG.ollama.model,
-                            prompt: `${systemPrompt}\n\nUser Question: ${userMessage}\nAssistant Response:`,
-                            stream: false,
-                            temperature: 0.7
-                        })
-                    }
-                );
-
-                if (!response.ok) {
-                    throw new Error('Ollama service not running');
-                }
-
-                const result = await response.json();
-                return result.response ? result.response.trim().slice(0, 400) : "No response generated.";
-            } catch (error) {
-                return `Please make sure Ollama is running. Start it with: ollama serve`;
-            }
-        }
-
-        function addMessage(text, isUser = false) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `chat-message ${isUser ? 'user-message' : 'bot-message'}`;
-            
-            const contentDiv = document.createElement('div');
-            contentDiv.className = 'message-content';
-            contentDiv.textContent = text;
-            
-            messageDiv.appendChild(contentDiv);
-            chatMessages.appendChild(messageDiv);
-            
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        function showLoadingIndicator() {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = 'chat-message bot-message';
-            messageDiv.id = 'loading-indicator';
-            
-            const contentDiv = document.createElement('div');
-            contentDiv.className = 'message-loading';
-            contentDiv.innerHTML = '<span></span><span></span><span></span>';
-            
-            messageDiv.appendChild(contentDiv);
-            chatMessages.appendChild(messageDiv);
-            
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        function removeLoadingIndicator() {
-            const loadingDiv = document.getElementById('loading-indicator');
-            if (loadingDiv) {
-                loadingDiv.remove();
-            }
-        }
-
-        async function handleChatSubmit(event) {
-            event.preventDefault();
-            
-            const message = chatInput.value.trim();
-            if (!message) return;
-            
-            addMessage(message, true);
-            chatInput.value = '';
-            chatSendBtn.disabled = true;
-            showLoadingIndicator();
-            
-            const response = await getChatResponse(message);
-            
-            removeLoadingIndicator();
-            addMessage(response, false);
-            
-            chatSendBtn.disabled = false;
-            chatInput.focus();
-        }
-
-        // Allow Enter key to send
-        chatInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                chatForm.dispatchEvent(new Event('submit'));
-            }
-        });
     </script>
+</body>
+</html>
 </body>
 </html>
